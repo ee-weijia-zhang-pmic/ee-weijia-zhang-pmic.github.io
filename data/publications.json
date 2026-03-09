@@ -1,0 +1,47 @@
+[
+  {
+    "year": 2026,
+    "authors": "Johnson A, Lee B, Smith J",
+    "title": "Efficient Neural Architecture Search via Gradient Approximation",
+    "venue": "ICML 2026",
+    "pdf": "#",
+    "code": "#",
+    "doi": ""
+  },
+  {
+    "year": 2025,
+    "authors": "Lee B, Smith J",
+    "title": "Robust Vision Transformers under Natural Distribution Shift",
+    "venue": "NeurIPS 2025",
+    "pdf": "#",
+    "code": "#",
+    "doi": ""
+  },
+  {
+    "year": 2025,
+    "authors": "Smith J, Martinez E",
+    "title": "Physics-Informed Networks for Climate Emulation",
+    "venue": "ICML 2025",
+    "pdf": "#",
+    "code": "",
+    "doi": ""
+  },
+  {
+    "year": 2024,
+    "authors": "Martinez E, Johnson A, Smith J",
+    "title": "Scalable Molecular Generation with Diffusion Models",
+    "venue": "ICLR 2024",
+    "pdf": "#",
+    "code": "#",
+    "doi": "#"
+  },
+  {
+    "year": 2023,
+    "authors": "Chen F, Smith J",
+    "title": "Calibrated Uncertainty for Overparameterized Models",
+    "venue": "NeurIPS 2023",
+    "pdf": "#",
+    "code": "#",
+    "doi": ""
+  }
+]

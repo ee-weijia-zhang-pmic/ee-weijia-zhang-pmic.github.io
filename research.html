@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — XYZ Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a class="site-title" href="index.html">XYZ Lab</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="people.html">People</a>
+        <a href="news.html">News</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="join.html">Join Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">Research</h1>
+      <!-- Content rendered from data/research.json -->
+      <div id="content"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        XYZ Lab · Department of Computer Science · XYZ University ·
+        <a href="mailto:pi@university.edu">pi@university.edu</a>
+      </p>
+      <p>&copy; <span id="year"></span> XYZ Lab</p>
+    </div>
+  </footer>
+
+  <script src="js/render.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    loadJSON('data/research.json', document.getElementById('content'), data => {
+      renderResearch(data, document.getElementById('content'));
+    });
+  </script>
+
+</body>
+</html>

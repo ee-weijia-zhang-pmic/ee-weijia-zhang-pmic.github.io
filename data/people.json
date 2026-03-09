@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Prof. Jane Smith",
+    "role": "PI",
+    "role_title": "Associate Professor",
+    "bio": "Jane Smith is an Associate Professor in the Department of Computer Science at XYZ University. Her research focuses on machine learning and its applications to scientific discovery. Before joining XYZ University she was a postdoc at Some Institute.",
+    "email": "jane.smith@university.edu",
+    "scholar": "https://scholar.google.com/",
+    "cv": "",
+    "website": "",
+    "photo": ""
+  },
+  {
+    "name": "Alice Johnson",
+    "role": "PhD Student",
+    "area": "Deep Learning",
+    "email": "alice@university.edu",
+    "photo": ""
+  },
+  {
+    "name": "Bob Lee",
+    "role": "PhD Student",
+    "area": "Computer Vision",
+    "email": "bob@university.edu",
+    "photo": ""
+  },
+  {
+    "name": "Carol Nguyen",
+    "role": "Postdoc",
+    "area": "Natural Language Processing",
+    "email": "carol@university.edu",
+    "photo": ""
+  },
+  {
+    "name": "David Park",
+    "role": "MS Student",
+    "area": "Reinforcement Learning",
+    "email": "david@university.edu",
+    "photo": ""
+  },
+  {
+    "name": "Eva Martinez",
+    "role": "Alumni",
+    "area": "PhD 2023",
+    "now": "Research Scientist at Big Tech Co."
+  },
+  {
+    "name": "Frank Chen",
+    "role": "Alumni",
+    "area": "PhD 2022",
+    "now": "Assistant Professor at Other University"
+  }
+]

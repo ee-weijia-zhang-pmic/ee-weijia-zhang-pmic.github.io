@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Efficient Machine Learning",
+    "description": "We develop algorithms and architectures that reduce the computational cost of training and inference for large-scale machine learning models. Our work spans neural architecture search, model compression, and hardware-aware optimization.",
+    "image": ""
+  },
+  {
+    "title": "Scientific Discovery with AI",
+    "description": "We apply machine learning to accelerate scientific discovery in domains such as biology, chemistry, and climate science. Key themes include physics-informed neural networks, generative models for molecular design, and uncertainty quantification.",
+    "image": ""
+  },
+  {
+    "title": "Robust and Reliable AI",
+    "description": "We study the reliability of machine learning systems under distribution shift, adversarial inputs, and data scarcity. Our goal is to develop methods that are provably robust and produce calibrated uncertainty estimates.",
+    "image": ""
+  }
+]

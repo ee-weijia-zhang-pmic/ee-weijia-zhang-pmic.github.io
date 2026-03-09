@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home — XYZ Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a class="site-title" href="index.html">XYZ Lab</a>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="people.html">People</a>
+        <a href="news.html">News</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="join.html">Join Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- ── Hero ───────────────────────────────────────────── -->
+      <div class="hero">
+        <h1>XYZ Lab</h1>
+        <p class="tagline">Department of Computer Science · XYZ University</p>
+        <p>
+          We are a research group working at the intersection of machine learning,
+          optimization, and scientific computing. Our goal is to develop efficient,
+          reliable, and interpretable AI systems that accelerate discovery in science
+          and engineering.
+        </p>
+        <p>
+          We are affiliated with the <a href="#">Institute for Data Science</a> and
+          collaborate broadly across campus and industry.
+        </p>
+      </div>
+
+      <!-- ── Research highlights ────────────────────────────── -->
+      <section>
+        <h2>Research</h2>
+        <div class="highlight-grid">
+          <div class="highlight-card">
+            <h3>Efficient ML</h3>
+            <p>Algorithms and architectures that reduce the cost of training and inference at scale.</p>
+            <a href="research.html">Learn more →</a>
+          </div>
+          <div class="highlight-card">
+            <h3>AI for Science</h3>
+            <p>Machine learning for molecular design, climate emulation, and beyond.</p>
+            <a href="research.html">Learn more →</a>
+          </div>
+          <div class="highlight-card">
+            <h3>Robust AI</h3>
+            <p>Methods that are provably reliable under distribution shift and adversarial inputs.</p>
+            <a href="research.html">Learn more →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Recent news (loaded from data/news.json) ─────── -->
+      <section>
+        <h2>Recent News</h2>
+        <div id="news-preview"></div>
+        <p style="margin-top:1rem;"><a href="news.html">All news →</a></p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        XYZ Lab · Department of Computer Science · XYZ University ·
+        <a href="mailto:pi@university.edu">pi@university.edu</a>
+      </p>
+      <p>&copy; <span id="year"></span> XYZ Lab</p>
+    </div>
+  </footer>
+
+  <script src="js/render.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    loadJSON('data/news.json', document.getElementById('news-preview'), data => {
+      renderNews(data, document.getElementById('news-preview'), 3);
+    });
+  </script>
+
+</body>
+</html>

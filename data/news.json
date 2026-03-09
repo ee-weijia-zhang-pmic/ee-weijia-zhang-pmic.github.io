@@ -1,0 +1,27 @@
+[
+  {
+    "date": "2026-02-10",
+    "headline": "Paper accepted at ICML 2026",
+    "body": "Our paper on efficient neural architecture search has been accepted at ICML 2026. Congratulations to Alice and Bob!"
+  },
+  {
+    "date": "2026-01-20",
+    "headline": "Carol joins the lab as a postdoc",
+    "body": "We welcome Carol Nguyen to the lab. Carol completed her PhD at Another University and will be working on NLP projects."
+  },
+  {
+    "date": "2025-12-05",
+    "headline": "Best Paper Award at NeurIPS Workshop",
+    "body": "Our work on robust optimization received the best paper award at the NeurIPS Optimization Workshop."
+  },
+  {
+    "date": "2025-10-15",
+    "headline": "New NSF grant awarded",
+    "body": "The lab has received a new NSF grant to study scalable methods for scientific machine learning. We are hiring!"
+  },
+  {
+    "date": "2025-08-01",
+    "headline": "Eva defends her PhD dissertation",
+    "body": "Congratulations to Eva Martinez on successfully defending her PhD dissertation! Eva will join Big Tech Co. as a Research Scientist."
+  }
+]

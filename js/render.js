@@ -1,0 +1,172 @@
+/* ============================================================
+   XYZ Lab — render.js
+   Shared helpers for fetching JSON data and rendering pages.
+   ============================================================ */
+
+/** Show a loading message in the target element */
+function showLoading(el) {
+  el.innerHTML = '<p class="loading">Loading…</p>';
+}
+
+/** Show an error message in the target element */
+function showError(el, msg) {
+  el.innerHTML = `<p class="error">Could not load content: ${msg}</p>`;
+}
+
+/** Fetch a JSON file and call callback(data), or show error in el */
+async function loadJSON(path, el, callback) {
+  showLoading(el);
+  try {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    callback(data);
+  } catch (err) {
+    showError(el, err.message);
+  }
+}
+
+/* ── People ─────────────────────────────────────────────────── */
+function renderPeople(data, el) {
+  const pi       = data.filter(p => p.role === 'PI');
+  const students = data.filter(p => ['PhD Student', 'Postdoc', 'MS Student', 'Undergraduate'].includes(p.role));
+  const alumni   = data.filter(p => p.role === 'Alumni');
+
+  let html = '';
+
+  // PI section
+  if (pi.length) {
+    html += '<section><h2>Principal Investigator</h2>';
+    pi.forEach(p => {
+      html += `
+        <div class="pi-card">
+          ${p.photo
+            ? `<img src="${p.photo}" alt="${p.name}">`
+            : `<div class="photo-placeholder">Photo</div>`}
+          <div class="info">
+            <h3>${p.name}</h3>
+            <div class="role">${p.role_title || p.role}</div>
+            <p>${p.bio || ''}</p>
+            <div class="links">
+              ${p.email    ? `<a href="mailto:${p.email}">Email</a>` : ''}
+              ${p.scholar  ? `<a href="${p.scholar}" target="_blank">Google Scholar</a>` : ''}
+              ${p.cv       ? `<a href="${p.cv}" target="_blank">CV</a>` : ''}
+              ${p.website  ? `<a href="${p.website}" target="_blank">Website</a>` : ''}
+            </div>
+          </div>
+        </div>`;
+    });
+    html += '</section>';
+  }
+
+  // Current members section
+  if (students.length) {
+    html += '<section><h2>Lab Members</h2><div class="people-grid">';
+    students.forEach(p => {
+      html += `
+        <div class="person-card">
+          ${p.photo
+            ? `<img src="${p.photo}" alt="${p.name}">`
+            : `<div class="photo-placeholder">Photo</div>`}
+          <div class="card-body">
+            <h3>${p.name}</h3>
+            <div class="role">${p.role}</div>
+            ${p.area ? `<div class="area">${p.area}</div>` : ''}
+          </div>
+        </div>`;
+    });
+    html += '</div></section>';
+  }
+
+  // Alumni section
+  if (alumni.length) {
+    html += '<section><h2>Alumni</h2><ul class="alumni-list">';
+    alumni.forEach(p => {
+      html += `<li><strong>${p.name}</strong>${p.area ? ` — ${p.area}` : ''}${p.now ? `<span class="alumni-now">(Now: ${p.now})</span>` : ''}</li>`;
+    });
+    html += '</ul></section>';
+  }
+
+  el.innerHTML = html || '<p>No people found. Add entries to data/people.json.</p>';
+}
+
+/* ── News ───────────────────────────────────────────────────── */
+function renderNews(data, el, limit) {
+  // Sort newest first
+  const sorted = [...data].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const items  = limit ? sorted.slice(0, limit) : sorted;
+
+  if (!items.length) {
+    el.innerHTML = '<p>No news yet. Add entries to data/news.json.</p>';
+    return;
+  }
+
+  let html = '<ul class="news-list">';
+  items.forEach(item => {
+    const date = new Date(item.date + 'T00:00:00');
+    const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    html += `
+      <li class="news-item">
+        <div class="news-date">${formatted}</div>
+        <div class="news-headline">${item.headline}</div>
+        ${item.body ? `<div class="news-body">${item.body}</div>` : ''}
+      </li>`;
+  });
+  html += '</ul>';
+  el.innerHTML = html;
+}
+
+/* ── Research ───────────────────────────────────────────────── */
+function renderResearch(data, el) {
+  if (!data.length) {
+    el.innerHTML = '<p>No research topics yet. Add entries to data/research.json.</p>';
+    return;
+  }
+
+  let html = '';
+  data.forEach(topic => {
+    html += `
+      <div class="research-topic">
+        <h3>${topic.title}</h3>
+        <p>${topic.description}</p>
+        ${topic.image ? `<img src="${topic.image}" alt="${topic.title}">` : ''}
+      </div>`;
+  });
+  el.innerHTML = html;
+}
+
+/* ── Publications ───────────────────────────────────────────── */
+function renderPublications(data, el) {
+  if (!data.length) {
+    el.innerHTML = '<p>No publications yet. Add entries to data/publications.json.</p>';
+    return;
+  }
+
+  // Group by year, sort descending
+  const byYear = {};
+  data.forEach(pub => {
+    if (!byYear[pub.year]) byYear[pub.year] = [];
+    byYear[pub.year].push(pub);
+  });
+  const years = Object.keys(byYear).sort((a, b) => b - a);
+
+  let html = '';
+  years.forEach(year => {
+    html += `<div class="pub-year-group"><div class="pub-year">${year}</div><ul class="pub-list">`;
+    byYear[year].forEach(pub => {
+      html += `
+        <li class="pub-entry">
+          <span class="pub-authors">${pub.authors}.</span>
+          "<span class="pub-title">${pub.title}</span>."
+          <span class="pub-venue">${pub.venue}</span>, ${pub.year}.
+          <div class="pub-links">
+            ${pub.pdf  ? `<a href="${pub.pdf}"  target="_blank">PDF</a>`  : ''}
+            ${pub.code ? `<a href="${pub.code}" target="_blank">Code</a>` : ''}
+            ${pub.doi  ? `<a href="${pub.doi}"  target="_blank">DOI</a>`  : ''}
+          </div>
+        </li>`;
+    });
+    html += '</ul></div>';
+  });
+  el.innerHTML = html;
+}

@@ -11,39 +11,47 @@
     "photo": "assets/Weijia.jpg"
   },
   {
-    "name": "Ge Yu Chu",
-    "role": "PhD Student",
+    "name": "Hongchang Qiao",
+    "role": "Post-doctoral Fellow",
     "area": "",
-    "email": "yc.ge@connect.ust.hk",
-    "photo": ""
+    "email": "",
+    "photo": "assets/hongchang.jpg"
   },
   {
-    "name": "Ma Xi Nuo",
-    "role": "PhD Student",
+    "name": "Xinuo Ma",
+    "role": "PhD Candidate",
     "area": "",
     "email": "xmabq@connect.ust.hk",
     "photo": "assets/MaXinuo.jpg"
   },
   {
-    "name": "Teng Xiang Yu",
+    "name": "Xiangyu Teng",
     "role": "PhD Student",
     "area": "",
     "email": "xtengaa@connect.ust.hk",
-    "photo": ""
+    "photo": "assets/xiangyu.jpg"
   },
   {
-    "name": "Mi Wen Yuan",
-    "role": "Visiting Student",
+    "name": "Yuchu Ge",
+    "role": "PhD Student",
     "area": "",
-    "email": "wmi802@connect.ust.hk",
-    "photo": ""
+    "email": "yc.ge@connect.ust.hk",
+    "photo": "assets/yuchu.jpg"
   },
   {
-    "name": "Li Feng Tong",
+    "name": "Fengtong Li",
     "role": "MPhil Student",
     "area": "",
     "email": "flibc@connect.ust.hk",
-    "photo": ""
+    "photo": "assets/fengtong.jpg"
   }
+  {
+    "name": "Wenyuan Mi",
+    "role": "Visiting Student",
+    "area": "",
+    "email": "wmi802@connect.ust.hk",
+    "photo": "assets/wenyuan.jpg"
+  },
+
 ]
 

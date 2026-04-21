@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home — XYZ Lab</title>
+  <title>Home — PriMa Lab</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header>
     <div class="container">
-      <a class="site-title" href="index.html">XYZ Lab</a>
+      <a class="site-title" href="index.html">PriMa Lab</a>
       <nav>
         <a href="index.html" class="active">Home</a>
         <a href="people.html">People</a>
@@ -27,12 +27,12 @@
 
   <!-- ── Hero ───────────────────────────────────────────── -->
   <div class="hero">
-    <h1>XYZ Lab</h1>
+    <h1>PriMa Lab</h1>
     <p class="tagline">Department of Electronic and Computer Engineering · HKUST</p>
   
     <p>
-      We are a research group dedicated to advancing next-generation power
-      electronics and integrated energy systems. Our work combines circuit
+      Power Reliability & Integration for Modern Applications (PRIMA) Lab is a research group dedicated to advancing next-generation power
+  electronics and integrated energy systems. Our work combines circuit
       innovation, semiconductor technologies, and intelligent control to build
       efficient, compact, and reliable power solutions for emerging applications.
     </p>
@@ -82,9 +82,9 @@
 
  <!-- ── Recent news (loaded from data/news.json) ─────── -->
       <section>
-        <h2>Recent News</h2>
-        <div id="news-preview"></div>
-        <p style="margin-top:1rem;"><a href="news.html">All news →</a></p>
+      <h2>Events & News</h2>
+      <div id="news-preview"></div>
+      <p style="margin-top:1rem;"><a href="events&news.html">All news →</a></p>
       </section>
 
     </div>
@@ -93,7 +93,7 @@
   <footer>
     <div class="container">
       <p>
-        XYZ Lab · Department of Electronic and Computer Engineering · HKUST ·
+        PriMa Lab · Department of Electronic and Computer Engineering · HKUST ·
         <a href="mailto:pi@university.edu">pi@university.edu</a>
       </p>
       <p>&copy; <span id="year"></span> XYZ Lab</p>
@@ -104,7 +104,7 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     loadJSON('data/news.json', document.getElementById('news-preview'), data => {
-      renderNews(data, document.getElementById('news-preview'), 3);
+      renderNewsPreview(data, document.getElementById('news-preview'), 2);
     });
   </script>
 

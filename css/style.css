@@ -266,6 +266,7 @@ section h2 {
 
 .pi-card .info h3 { font-size: 1.2rem; margin-bottom: .1rem; }
 .pi-card .info .role { color: var(--accent); font-size: .9rem; margin-bottom: .6rem; }
+.pi-card .info p { text-align: justify;} /* right&left align*/
 .pi-card .links { margin-top: .5rem; font-size: .9rem; }
 .pi-card .links a { margin-right: .75rem; }
 

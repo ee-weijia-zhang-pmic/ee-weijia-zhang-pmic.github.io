@@ -29,7 +29,7 @@ async function loadJSON(path, el, callback) {
 /* ── People ─────────────────────────────────────────────────── */
 function renderPeople(data, el) {
   const pi       = data.filter(p => p.role === 'PI');
-  const students = data.filter(p => ['PhD Candidate','PhD Student', 'post-doctoral fellow', 'MPhil Student', 'Visiting Student', 'Undergraduate'].includes(p.role));
+  const students = data.filter(p => ['PhD Candidate','PhD Student', 'Post-doctoral Fellow', 'MPhil Student', 'Visiting Student', 'Undergraduate'].includes(p.role));
   const alumni   = data.filter(p => p.role === 'Alumni');
 
   let html = '';

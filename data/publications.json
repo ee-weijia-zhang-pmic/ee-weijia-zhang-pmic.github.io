@@ -1,45 +1,45 @@
 [
   {
-    "year": 2026,
-    "authors": "Johnson A, Lee B, Smith J",
-    "title": "Efficient Neural Architecture Search via Gradient Approximation",
-    "venue": "ICML 2026",
+    "year": 2025,
+    "authors": "Y Ge, WJ Zhang",
+    "title": "A Review of Active Gate Drivers for SiC Power MOSFETs",
+    "venue": "ASICON 2025",
     "pdf": "#",
     "code": "#",
     "doi": ""
   },
   {
     "year": 2025,
-    "authors": "Lee B, Smith J",
-    "title": "Robust Vision Transformers under Natural Distribution Shift",
-    "venue": "NeurIPS 2025",
+    "authors": "WT Ng, J Liang, W Cui, CYA Yueng, N Kim, WJ Zhang",
+    "title": "Design Considerations for Smart Gate Drivers",
+    "venue": "ASICONS 2025",
     "pdf": "#",
     "code": "#",
     "doi": ""
   },
   {
     "year": 2025,
-    "authors": "Smith J, Martinez E",
-    "title": "Physics-Informed Networks for Climate Emulation",
-    "venue": "ICML 2025",
+    "authors": "WT Cui, WJ Zhang, J Liang, H Nishio, M Iwamoto, WT Ng",
+    "title": "A Dynamic Gate Driver with Auto-Patterning to Reduce Ringing and Switching Loss",
+    "venue": "ISPSD 2025",
     "pdf": "#",
     "code": "",
     "doi": ""
   },
   {
-    "year": 2024,
-    "authors": "Martinez E, Johnson A, Smith J",
-    "title": "Scalable Molecular Generation with Diffusion Models",
-    "venue": "ICLR 2024",
+    "year": 2022,
+    "authors": "WT Cui, WJ Zhang, JY Liang, H Nishio, H Sumida, H Nakajima, Yuan-Ta Hsieh, Hann-Huei Tsai, Ying-Zong Juang, Wen-Kuan Yeh, WT Ng",
+    "title": "A dynamic gate driver IC with automated pattern optimization for SiC power MOSFETs",
+    "venue": "ISPSD 2022",
     "pdf": "#",
     "code": "#",
     "doi": "#"
   },
   {
-    "year": 2023,
-    "authors": "Chen F, Smith J",
-    "title": "Calibrated Uncertainty for Overparameterized Models",
-    "venue": "NeurIPS 2023",
+    "year": 2021,
+    "authors": "Wei Jia Zhang, Jingshu Yu, Wen Tao Cui, Yahui Leng, Jingyuan Liang, Yuan-Ta Hsieh, Hann-Huei Tsai, Ying-Zong Juang, Wen-Kuan Yeh, Wai Tung Ng",
+    "title": "A smart gate driver IC for GaN power HEMTs with dynamic ringing suppression",
+    "venue": "IEEE TPE",
     "pdf": "#",
     "code": "#",
     "doi": ""

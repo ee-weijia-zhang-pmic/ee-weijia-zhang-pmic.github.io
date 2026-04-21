@@ -151,28 +151,45 @@ el.innerHTML = html || '<p>No people found. Add entries to data/people.json.</p>
 }
 
 /* ── News ───────────────────────────────────────────────────── */
-function renderNews(data, el, limit) {
-  // Sort newest first
-  const sorted = [...data].sort((a, b) => new Date(b.date) - new Date(a.date));
-  const items  = limit ? sorted.slice(0, limit) : sorted;
-
-  if (!items.length) {
-    el.innerHTML = '<p>No news yet. Add entries to data/news.json.</p>';
+function renderNews(data, el) {
+  if (!data.length) {
+    el.innerHTML = '<p>No news yet.</p>';
     return;
   }
 
-  let html = '<ul class="news-list">';
-  items.forEach(item => {
-    const date = new Date(item.date + 'T00:00:00');
-    const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-    html += `
-      <li class="news-item">
-        <div class="news-date">${formatted}</div>
-        <div class="news-headline">${item.headline}</div>
-        ${item.body ? `<div class="news-body">${item.body}</div>` : ''}
-      </li>`;
+  const years = [2026, 2025, 2024];
+  let html = '';
+
+  years.forEach(year => {
+    const items = data.filter(item => item.year == year);
+    if (!items.length) return;
+
+    html += `<section><h2>${year}</h2>`;
+
+    items.forEach(item => {
+      html += `
+        <div class="news-event">
+          <h3>${item.headline}</h3>
+          <p class="news-description">- ${item.description}</p>
+      `;
+
+      if (item.photos && item.photos.length) {
+        html += `<div class="news-photo-grid">`;
+
+        item.photos.forEach(photo => {
+          html += `
+            <div class="news-photo-item">
+              <img src="${photo.image}" alt="${photo.caption}">
+              <p>${photo.caption}</p>
+            </div>
+          `;
+        });
+        html += `</div>`;
+      }
+      html += `</div>`;
+    });
+    html += `</section>`;
   });
-  html += '</ul>';
   el.innerHTML = html;
 }
 

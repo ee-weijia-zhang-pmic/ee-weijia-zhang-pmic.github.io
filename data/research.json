@@ -1,17 +1,17 @@
 [
   {
-    "title": "Efficient Machine Learning",
-    "description": "We develop algorithms and architectures that reduce the computational cost of training and inference for large-scale machine learning models. Our work spans neural architecture search, model compression, and hardware-aware optimization.",
+    "title": "Advanced Power IC Design and Gate Drivers",
+    "description": "We develop next-generation power IC architectures and smart gate driver techniques for high-performance power switches. Our research addresses ultra-fast transient response, ultra-low-noise control, complex loop stability, and extreme power management challenges for advanced electronic systems.",
     "image": ""
   },
   {
-    "title": "Scientific Discovery with AI",
-    "description": "We apply machine learning to accelerate scientific discovery in domains such as biology, chemistry, and climate science. Key themes include physics-informed neural networks, generative models for molecular design, and uncertainty quantification.",
+    "title": "Wide-Bandgap Power Devices and High-Density Integration",
+    "description": "We explore innovative platforms based on wide-bandgap semiconductor devices such as GaN and SiC for high-voltage and high-efficiency applications. Our work also includes power module design, advanced packaging, 3D integration, and thermal management for compact and high-density power systems.",
     "image": ""
   },
   {
-    "title": "Robust and Reliable AI",
-    "description": "We study the reliability of machine learning systems under distribution shift, adversarial inputs, and data scarcity. Our goal is to develop methods that are provably robust and produce calibrated uncertainty estimates.",
+    "title": "AI-Assisted Power Applications",
+    "description": "We investigate how artificial intelligence can enhance modern power electronics systems. Topics include intelligent control, adaptive optimization, predictive health monitoring, design automation, and AI-enabled energy management for future smart power applications.",
     "image": ""
   }
 ]

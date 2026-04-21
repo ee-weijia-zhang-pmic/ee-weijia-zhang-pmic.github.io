@@ -90,29 +90,59 @@ function renderPeople(data, el) {
    //Gruop photos Section
    html += `
    <section>
-     <h2>Group Photo</h2>
+     <h2>Group Photos</h2>
      <div class="group-photo-grid">
    
        <div class="group-photo-item">
-         <div class="group-photo-placeholder">Photo</div>
-         <p>Lab Retreat 2025</p>
+         <img src="assets/apec2026.jpg" alt="APEC Photo">
+         <p>Chairing APEC 2026</p>
        </div>
    
        <div class="group-photo-item">
-         <div class="group-photo-placeholder">Photo</div>
-         <p>Conference Gathering</p>
+         <img src="assets/apec2026YUchu.jpg" alt="APEC Photo">
+         <p>Ge Yuchu presenting poster at APEC 2026</p>
        </div>
-   
+       
        <div class="group-photo-item">
-         <div class="group-photo-placeholder">Photo</div>
-         <p>Research Meeting</p>
+         <img src="assets/apecmeeting.jpg" alt="APEC Photo">
+         <p>Group photo with APEC guests</p>
        </div>
-   
+       
        <div class="group-photo-item">
-         <div class="group-photo-placeholder">Photo</div>
-         <p>Team Celebration</p>
+         <img src="assets/rising star 2025 mentor Taiwan.jpg" alt="Rising Stars Photo">
+         <p>Mentor at Rising Stars 2025 in Taiwan</p>
        </div>
-   
+       
+       <div class="group-photo-item">
+         <img src="assets/ispsd icd.jpg" alt="ispsd2025 Photo">
+         <p>Chairing ISPSD/ICD 2025</p>
+       </div>
+       
+       <div class="group-photo-item">
+         <img src="assets/ispsd icd2.jpg" alt="ispsd2025 Photo">
+         <p>Group photo with ISPSD/ICD guests</p>
+       </div>       
+       
+       <div class="group-photo-item">
+         <img src="assets/PhotowithProfWu.jpg" alt="Photo with Prof. Ng">
+         <p>Photo with Prof. Wai Tung Ng, University of Toronto</p>
+       </div>
+
+       <div class="group-photo-item">
+         <img src="assets/ispsd2024_2.jpg" alt="ispsd2024 Photo">
+         <p>Chairing ISPSD 2024</p>
+       </div>
+
+       <div class="group-photo-item">
+         <img src="assets/adi7.jpg" alt="ADI Photo">
+         <p>Presenting work at ADI</p>
+       </div>
+
+       <div class="group-photo-item">
+         <img src="assets/adi3.jpg" alt="ADI Photo">
+         <p>Group photo with ADI colleagues</p>
+       </div>       
+      
      </div>
    </section>
    `;

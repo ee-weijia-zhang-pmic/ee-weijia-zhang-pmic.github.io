@@ -239,13 +239,10 @@ section h2 {
   margin-top: 0.5rem;
   font-size: 0.92rem;
 }
-.news-preview-item {
-  padding: 1.2rem 0;
-  border-bottom: 1px solid var(--border);
-}
+
 /* ── home news ─────────────────────────────────────────────────── */
-.news-preview-item:last-child {
-  border-bottom: none;
+.news-preview-item {
+  padding: 0.8rem 0 1rem 0;
 }
 
 .news-preview-item h3 {
@@ -406,6 +403,10 @@ section h2 {
 /* ── Join Us ────────────────────────────────────────────────── */
 .join-section { margin-bottom: 2rem; }
 .join-section h3 { color: var(--accent); margin-bottom: .5rem; }
+.join-section p,
+.join-section div {
+  text-align: justify;
+}
 
 /* ── Footer ─────────────────────────────────────────────────── */
 footer {
@@ -452,9 +453,9 @@ footer a:hover { color: var(--accent); }
   .pi-card img,
   .pi-card .photo-placeholder {
     width: 100%;
-    height: auto;           /* 高度自动 */
-    max-height: 420px;      /* 防止太大 */
-    object-fit: contain;    /* 完整显示 */
+    height: auto;           
+    max-height: 420px;      
+    object-fit: contain;   
   }
 
   /* ---------- Hero ---------- */
@@ -466,7 +467,7 @@ footer a:hover { color: var(--accent); }
     font-size: 1.6rem;
   }
 
-  /* ---------- Group Photo 手机一行一张 ---------- */
+  /* ---------- Group Photo--------- */
   .group-photo-grid {
     grid-template-columns: 1fr;
   }
@@ -478,7 +479,7 @@ footer a:hover { color: var(--accent); }
     object-fit: cover;
   }
 
-  /* ---------- News 图片手机一行一张 ---------- */
+  /* ---------- News ---------- */
   .news-photo-grid {
     grid-template-columns: 1fr;
   }

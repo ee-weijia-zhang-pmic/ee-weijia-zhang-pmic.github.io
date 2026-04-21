@@ -267,6 +267,36 @@ section h2 {
 }
 .alumni-list li:last-child { border-bottom: none; }
 .alumni-now { color: var(--text-muted); font-size: .85rem; }
+.group-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* groupphoto */
+.group-photo-item {
+  text-align: center;
+}
+
+.group-photo-placeholder,
+.group-photo-item img {
+  width: 100%;
+  height: 320px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.group-photo-item p {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+}
 
 /* ── Research ───────────────────────────────────────────────── */
 .research-topic {

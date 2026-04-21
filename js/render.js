@@ -29,7 +29,7 @@ async function loadJSON(path, el, callback) {
 /* ── People ─────────────────────────────────────────────────── */
 function renderPeople(data, el) {
   const pi       = data.filter(p => p.role === 'PI');
-  const students = data.filter(p => ['PhD Student', 'Postdoc', 'MS Student', 'Undergraduate'].includes(p.role));
+  const students = data.filter(p => ['PhD Student', 'Postdoc', 'Mphil Student', 'Visiting Student', 'Undergraduate'].includes(p.role));
   const alumni   = data.filter(p => p.role === 'Alumni');
 
   let html = '';
@@ -89,7 +89,35 @@ function renderPeople(data, el) {
 
   el.innerHTML = html || '<p>No people found. Add entries to data/people.json.</p>';
 }
+//Gruop photos Section
+html += `
+<section>
+  <h2>Group Photo</h2>
+  <div class="group-photo-grid">
 
+    <div class="group-photo-item">
+      <div class="group-photo-placeholder">Photo</div>
+      <p>Lab Retreat 2025</p>
+    </div>
+
+    <div class="group-photo-item">
+      <div class="group-photo-placeholder">Photo</div>
+      <p>Conference Gathering</p>
+    </div>
+
+    <div class="group-photo-item">
+      <div class="group-photo-placeholder">Photo</div>
+      <p>Research Meeting</p>
+    </div>
+
+    <div class="group-photo-item">
+      <div class="group-photo-placeholder">Photo</div>
+      <p>Team Celebration</p>
+    </div>
+
+  </div>
+</section>
+`;
 /* ── News ───────────────────────────────────────────────────── */
 function renderNews(data, el, limit) {
   // Sort newest first

@@ -165,6 +165,18 @@ section h2 {
   border-radius: 6px;
   padding: 1.25rem;
   background: var(--bg-alt);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.highlight-card p {
+  flex-grow: 1;
+}
+
+.highlight-card a {
+  margin-top: 1rem;
+  align-self: flex-start;
 }
 
 .highlight-card h3 { color: var(--accent); margin-bottom: .5rem; }

@@ -153,6 +153,28 @@ function renderNews(data, el) {
   el.innerHTML = html;
 }
 
+function renderNewsPreview(data, el, limit = 2) {
+  if (!data.length) {
+    el.innerHTML = '<p>No news yet.</p>';
+    return;
+  }
+
+  const items = data.slice(0, limit);
+
+  let html = '';
+
+  items.forEach(item => {
+    html += `
+      <div class="news-preview-item">
+        <h3>${item.headline}</h3>
+        <p>${item.description}</p>
+      </div>
+    `;
+  });
+
+  el.innerHTML = html;
+}
+
 /* ── Research ───────────────────────────────────────────────── */
 function renderResearch(data, el) {
   if (!data.length) {

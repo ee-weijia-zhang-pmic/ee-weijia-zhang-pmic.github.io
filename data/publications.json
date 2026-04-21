@@ -4,44 +4,53 @@
     "authors": "Y Ge, WJ Zhang",
     "title": "A Review of Active Gate Drivers for SiC Power MOSFETs",
     "venue": "ASICON 2025",
-    "pdf": "#",
-    "code": "#",
-    "doi": ""
+    "pdf": "",
+    "code": "",
+    "doi": "10.1109/ASICON66040.2025.11326070"
   },
   {
     "year": 2025,
     "authors": "WT Ng, J Liang, W Cui, CYA Yueng, N Kim, WJ Zhang",
     "title": "Design Considerations for Smart Gate Drivers",
-    "venue": "ASICONS 2025",
-    "pdf": "#",
-    "code": "#",
-    "doi": ""
+    "venue": "ASICON 2025",
+    "pdf": "",
+    "code": "",
+    "doi": "10.1109/ASICON66040.2025.11326188"
   },
   {
     "year": 2025,
     "authors": "WT Cui, WJ Zhang, J Liang, H Nishio, M Iwamoto, WT Ng",
     "title": "A Dynamic Gate Driver with Auto-Patterning to Reduce Ringing and Switching Loss",
     "venue": "ISPSD 2025",
-    "pdf": "#",
+    "pdf": "",
     "code": "",
-    "doi": ""
+    "doi": "10.23919/ISPSD62843.2025.11118084"
   },
   {
     "year": 2022,
     "authors": "WT Cui, WJ Zhang, JY Liang, H Nishio, H Sumida, H Nakajima, Yuan-Ta Hsieh, Hann-Huei Tsai, Ying-Zong Juang, Wen-Kuan Yeh, WT Ng",
     "title": "A dynamic gate driver IC with automated pattern optimization for SiC power MOSFETs",
     "venue": "ISPSD 2022",
-    "pdf": "#",
-    "code": "#",
-    "doi": "#"
+    "pdf": "",
+    "code": "",
+    "doi": "10.1109/ISPSD49238.2022.9813625"
   },
   {
     "year": 2021,
-    "authors": "Wei Jia Zhang, Jingshu Yu, Wen Tao Cui, Yahui Leng, Jingyuan Liang, Yuan-Ta Hsieh, Hann-Huei Tsai, Ying-Zong Juang, Wen-Kuan Yeh, Wai Tung Ng",
+    "authors": "WJ Zhang, J Yu, WT Cui, Y Leng, J Liang, YT Hsieh, HH Tsai, YZ Juang, WK Yeh, WT Ng",
     "title": "A smart gate driver IC for GaN power HEMTs with dynamic ringing suppression",
-    "venue": "IEEE TPE",
-    "pdf": "#",
-    "code": "#",
-    "doi": ""
+    "venue": "IEEE TPEL 2021",
+    "pdf": "",
+    "code": "",
+    "doi": "10.1109/TPEL.2021.3089679"
+  },
+  {
+    "year": 2020,
+    "authors": "WJ Zhang, J Yu, Y Leng, WT Cui, GQ Deng, WT Ng",
+    "title": "A segmented gate driver for E-mode GaN HEMTs with simple driving strength pattern control",
+    "venue": "ISPSD 2020",
+    "pdf": "",
+    "code": "",
+    "doi": "10.1109/ISPSD46842.2020.9170108"
   }
 ]

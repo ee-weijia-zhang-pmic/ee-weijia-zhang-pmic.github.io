@@ -280,28 +280,32 @@ function renderPublications(data, el) {
   </div>
 `;
 }
-/* ── home gallery slider ───────────────────────────── */
+/* ── home gallery ───────────────────────────── */
 
-const galleryTrack = document.querySelector('.gallery-track');
-const slides = document.querySelectorAll('.gallery-track img');
+const viewport = document.querySelector('.gallery-viewport');
+const images = document.querySelectorAll('.gallery-track img');
 const prevBtn = document.querySelector('.gallery-btn.prev');
 const nextBtn = document.querySelector('.gallery-btn.next');
 
-let currentIndex = 0;
-const totalSlides = slides.length;
+let current = 0;
 
-function updateGallery() {
-  galleryTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+function goToImage(index) {
+  if (index < 0) index = 0;
+  if (index >= images.length) index = images.length - 1;
+
+  current = index;
+
+  const target = images[current];
+  viewport.scrollTo({
+    left: target.offsetLeft,
+    behavior: 'smooth'
+  });
 }
 
 nextBtn.addEventListener('click', () => {
-  currentIndex++;
-  if (currentIndex >= totalSlides) currentIndex = 0;
-  updateGallery();
+  goToImage(current + 1);
 });
 
 prevBtn.addEventListener('click', () => {
-  currentIndex--;
-  if (currentIndex < 0) currentIndex = totalSlides - 1;
-  updateGallery();
+  goToImage(current - 1);
 });

@@ -272,25 +272,24 @@ section h2 {
   line-height: 1.6;
 }
 /* ── People ─────────────────────────────────────────────────── */
-.pi-card {
-  display: block;
-}
-
-.pi-card img,
-.pi-card .photo-placeholder {
-  float: left;
-  width: 110px;
-  height: 140px;
-  margin: 0 1rem .5rem 0;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.pi-card::after {
-  content: "";
-  display: block;
-  clear: both;
-}
+.pi-card { 
+   display: flex; 
+   gap: 1.75rem; 
+   align-items: flex-start; 
+   margin-bottom: 2.5rem; } 
+.pi-card img, 
+.pi-card .photo-placeholder { 
+   width: 130px; 
+   height: 160px; 
+   object-fit: cover; 
+   border-radius: 6px; 
+   flex-shrink: 0; 
+   background: var(--bg-alt); 
+   border: 1px solid var(--border); 
+   display: flex; 
+   align-items: center; 
+   justify-content: center; 
+   color: var(--text-muted); font-size: .8rem; }
 
 .pi-card .info h3 { font-size: 1.2rem; margin-bottom: .1rem; }
 .pi-card .info .role { color: var(--accent); font-size: .9rem; margin-bottom: .6rem; }
@@ -471,20 +470,25 @@ footer a:hover { color: var(--accent); }
   nav a { padding: .3rem .5rem; font-size: .85rem; }
 
   /* ---------- PI section ---------- */
-   .pi-card {
-     flex-direction: row;
-     align-items: flex-start;
-     gap: 1rem;
-   }
-   
-   .pi-card img,
-   .pi-card .photo-placeholder {
-     width: 110px;
-     height: 140px;
-     flex-shrink: 0;
-     object-fit: cover;
-     border-radius: 6px;
-   }
+ .pi-card {
+   display: block;
+ }
+
+ .pi-card img,
+ .pi-card .photo-placeholder {
+   float: left;
+   width: 110px;
+   height: 140px;
+   margin: 0 1rem .5rem 0;
+   object-fit: cover;
+   border-radius: 6px;
+ }
+
+ .pi-card::after {
+   content: "";
+   display: block;
+   clear: both;
+ }
   /* ---------- Hero ---------- */
   .hero {
     padding: 1.5rem 1rem;

@@ -273,26 +273,23 @@ section h2 {
 }
 /* ── People ─────────────────────────────────────────────────── */
 .pi-card {
-  display: flex;
-  gap: 1.75rem;
-  align-items: flex-start;
-  margin-bottom: 2.5rem;
+  display: block;
 }
 
 .pi-card img,
 .pi-card .photo-placeholder {
-  width: 130px;
-  height: 160px;
+  float: left;
+  width: 110px;
+  height: 140px;
+  margin: 0 1rem .5rem 0;
   object-fit: cover;
   border-radius: 6px;
-  flex-shrink: 0;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  font-size: .8rem;
+}
+
+.pi-card::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .pi-card .info h3 { font-size: 1.2rem; margin-bottom: .1rem; }

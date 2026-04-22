@@ -224,7 +224,7 @@ function renderResearch(data, el) {
       `;
     });
 
-    html += `</div><hr></section>`;
+    html += `</div></section>`;
   });
 
   el.innerHTML = html;

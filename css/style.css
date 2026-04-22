@@ -524,9 +524,9 @@ footer a:hover { color: var(--accent); }
 }
 /* ── Gallery Slider ───────────────────────────── */
 
+
 .gallery-slider {
   position: relative;
-  width: 100%;
   margin-top: 1rem;
 }
 
@@ -538,41 +538,34 @@ footer a:hover { color: var(--accent); }
 .gallery-track {
   display: flex;
   gap: 20px;
-  transition: transform 0.45s ease;
+  align-items: center;
+  transition: transform 0.35s ease;
 }
 
 .gallery-track img {
-  width: 100%;
-  max-width: 100%;
   height: clamp(220px, 25vw, 420px);
-  object-fit: contain;
+  width: auto;
+  max-width: 100%;
   flex-shrink: 0;
 
-  border-radius: 10px;
+  object-fit: contain;
   background: #f5f7fa;
+  border-radius: 10px;
 }
 
-/* arrows */
 .gallery-btn {
   position: absolute;
   bottom: 12px;
-  z-index: 10;
-
   width: 42px;
   height: 42px;
   border: none;
   border-radius: 50%;
 
   background: rgba(0,0,0,0.55);
-  color: white;
+  color: #fff;
   font-size: 22px;
   cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: background 0.2s ease;
+  z-index: 10;
 }
 
 .gallery-btn:hover {

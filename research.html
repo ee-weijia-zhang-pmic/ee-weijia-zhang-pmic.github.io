@@ -47,6 +47,20 @@
       renderResearch(data, document.getElementById('content'));
     });
   </script>
+  
+  <script>
+  window.addEventListener("load", () => {
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+      const el = document.getElementById(id);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  });
+</script>
 
 </body>
 </html>

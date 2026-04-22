@@ -25,7 +25,7 @@
   },
   {
     "section": "ai",
-    "title": "AI-Assisted Power Applications",
+    "title": "",
     "description": "We explore how artificial intelligence can enhance modern power electronics systems. Our work includes AI agents for automated measurement analysis, adaptive feedback tuning, neural-network-based predictive control, hybrid digital-analog frameworks, and intelligent multi-objective optimization for real-world power converters.<br><strong>Goals:</strong><br><span style='display:block; margin-left:1.5rem;'>• Deploy specialized AI agents to automate real-time measurement analysis and dynamically adjust control parameters.</span><span style='display:block; margin-left:1.5rem;'>• Develop unified generative models and neural-network-based predictive transient tuning.</span><span style='display:block; margin-left:1.5rem;'>• Apply advanced optimization algorithms such as space partitioning, greedy random search, and hill climbing.</span><span style='display:block; margin-left:1.5rem;'>• Benchmark AI-driven tuning against expert human performance to ensure target phase and gain margins.</span>",
     "image": ""
   }

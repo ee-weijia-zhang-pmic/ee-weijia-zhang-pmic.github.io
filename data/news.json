@@ -2,10 +2,10 @@
   {
   "year": 2026,
   "headline": "Upcoming - IEEE ISPSD",
-  "description": "Prof. Zhang will serve as <a href='https://www.ispsd2026.com' target='_blank' rel='noopener noreferrer'>2026 IEEE 38th International Symposium on Power Semiconductor Devices and ICs (ISPSD)</a> Power IC Design (ICD) Chair.",
+  "description": "Prof. Zhang will serve as <a href='https://www.ispsd2026.com/committee-members.html'_blank' rel='noopener noreferrer'>2026 IEEE 38th International Symposium on Power Semiconductor Devices and ICs (ISPSD)</a> Power IC Design (ICD) Chair.",
   "photos": [
     {
-      "image": "assets/apecmeeting.jpg",
+      "image": "assets/ispsd2026.jpg",
       "caption": ""
     }
   ]
@@ -51,11 +51,11 @@
     "photos": [
       {
         "image": "assets/ispsd icd.jpg",
-        "caption": "Chairing ISPSD/ICD 2025"
+        "caption": "Chairing ISPSD ICD 2025"
       },
       {
         "image": "assets/ispsd icd2.jpg",
-        "caption": "Group photo with ISPSD/ICD guest"
+        "caption": "Group photo with ISPSD guest"
       }      
     ]
   },
@@ -66,7 +66,7 @@
     "photos": [
       {
         "image": "assets/ispsd2024_2.jpg",
-        "caption": "Chairing ISPSD/ICD 2024"
+        "caption": "Chairing ISPSD ICD 2024"
       },
       {
         "image": "assets/ispsd2024_3.jpg",

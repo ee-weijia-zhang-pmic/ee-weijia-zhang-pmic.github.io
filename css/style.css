@@ -473,7 +473,11 @@ footer a:hover { color: var(--accent); }
     height: auto;
     gap: .5rem;
   }
-
+   
+  .container {
+     width: 100%;
+     padding: 0 1rem;
+  }
   nav { gap: .1rem; }
   nav a { padding: .3rem .5rem; font-size: .85rem; }
 

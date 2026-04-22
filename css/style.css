@@ -569,7 +569,7 @@ footer a:hover { color: var(--accent); }
 }
 
 .gallery-track img {
-  height: clamp(220px, 25vw, 420px);
+  height: clamp(275px, 31vw, 525px);
   width: auto;
   max-width: 100%;
   flex-shrink: 0;

@@ -373,8 +373,13 @@ section h2 {
 }
 
 /* ── Research ───────────────────────────────────────────────── */
+.research-section {
+  margin-bottom: 2rem;
+}
+
 .research-topic {
   margin-bottom: 2.5rem;
+  padding: 1rem 0;
 }
 
 .research-topic img {

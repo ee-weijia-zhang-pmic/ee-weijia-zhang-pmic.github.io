@@ -491,6 +491,27 @@ footer a:hover { color: var(--accent); }
    display: block;
    clear: both;
  }
+   
+ .people-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+ .person-card img,
+ .person-card .photo-placeholder {
+   height: auto;
+   aspect-ratio: 3 / 4;
+   object-fit: cover;
+ }
+
+ .person-card h3 {
+   font-size: 0.9rem;
+ }
+
+ .person-card .role,
+ .person-card .area {
+   font-size: 0.75rem;
+ }
   /* ---------- Hero ---------- */
   .hero {
     padding: 1.5rem 1rem;
@@ -511,6 +532,7 @@ footer a:hover { color: var(--accent); }
     max-height: 320px;
     object-fit: cover;
   }
+   
 
   /* ---------- News ---------- */
   .news-photo-grid {
@@ -522,8 +544,12 @@ footer a:hover { color: var(--accent); }
     max-height: 320px;
   }
 }
-/* ── Gallery Slider ───────────────────────────── */
 
+
+
+
+
+/* ── Gallery Slider ───────────────────────────── */
 
 .gallery-slider {
   position: relative;
@@ -578,4 +604,9 @@ footer a:hover { color: var(--accent); }
 
 .gallery-btn.next {
   right: 10px;
+}
+
+.gallery-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
 }

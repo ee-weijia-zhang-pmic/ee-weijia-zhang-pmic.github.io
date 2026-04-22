@@ -177,23 +177,58 @@ function renderNewsPreview(data, el, limit = 2) {
 
 /* ── Research ───────────────────────────────────────────────── */
 function renderResearch(data, el) {
-  if (!data.length) {
-    el.innerHTML = '<p>No research topics yet. Add entries to data/research.json.</p>';
-    return;
-  }
+  const groups = {
+    ic_design: [],
+    wbg_system: [],
+    ai: []
+  };
 
-  let html = '';
-  data.forEach(topic => {
-    html += `
-      <div class="research-topic">
-        <h3>${topic.title}</h3>
-        <p>${topic.description}</p>
-        ${topic.image ? `<img src="${topic.image}" alt="${topic.title}">` : ''}
-      </div>`;
+  data.forEach(item => {
+    groups[item.section].push(item);
   });
+
+  const sections = [
+    {
+      id: "ic-design",
+      title: "Advanced Power IC Design",
+      key: "ic_design"
+    },
+    {
+      id: "wbg",
+      title: "Wide-Bandgap Devices & System Integration",
+      key: "wbg_system"
+    },
+    {
+      id: "ai",
+      title: "AI-Assisted Power Applications",
+      key: "ai"
+    }
+  ];
+
+  let html = "";
+
+  sections.forEach(sec => {
+    html += `
+      <section id="${sec.id}">
+        <h2>${sec.title}</h2>
+        <div class="research-section">
+    `;
+
+    groups[sec.key].forEach(topic => {
+      html += `
+        <div class="research-topic">
+          <h3>${topic.title}</h3>
+          <p>${topic.description}</p>
+          ${topic.image ? `<img src="${topic.image}" alt="${topic.title}">` : ''}
+        </div>
+      `;
+    });
+
+    html += `</div><hr></section>`;
+  });
+
   el.innerHTML = html;
 }
-
 /* ── Publications ───────────────────────────────────────────── */
 function renderPublications(data, el) {
   if (!data.length) {

@@ -229,6 +229,13 @@ function renderResearch(data, el) {
 
   el.innerHTML = html;
 }
+setTimeout(() => {
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  }
+}, 50);
+
 /* ── Publications ───────────────────────────────────────────── */
 function renderPublications(data, el) {
   if (!data.length) {

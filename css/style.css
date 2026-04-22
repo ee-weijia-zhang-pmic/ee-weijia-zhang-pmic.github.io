@@ -543,6 +543,12 @@ footer a:hover { color: var(--accent); }
     height: auto;
     max-height: 320px;
   }
+ /* ---------- text ---------- */
+p {
+  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
 }
 
 

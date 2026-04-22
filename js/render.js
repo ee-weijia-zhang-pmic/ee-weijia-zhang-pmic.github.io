@@ -287,25 +287,48 @@ const images = document.querySelectorAll('.gallery-track img');
 const prevBtn = document.querySelector('.gallery-btn.prev');
 const nextBtn = document.querySelector('.gallery-btn.next');
 
-let current = 0;
+function getCurrentIndex() {
+  const left = viewport.scrollLeft;
 
-function goToImage(index) {
-  if (index < 0) index = 0;
-  if (index >= images.length) index = images.length - 1;
+  for (let i = 0; i < images.length; i++) {
+    if (images[i].offsetLeft >= left - 5) {
+      return i;
+    }
+  }
 
-  current = index;
-
-  const target = images[current];
-  viewport.scrollTo({
-    left: target.offsetLeft,
-    behavior: 'smooth'
-  });
+  return images.length - 1;
 }
 
-nextBtn.addEventListener('click', () => {
-  goToImage(current + 1);
-});
+function goTo(index) {
+  if (index < 0) index = 0;
+  if (index > images.length - 1) index = images.length - 1;
+
+  viewport.scrollTo({
+    left: images[index].offsetLeft,
+    behavior: 'smooth'
+  });
+
+  updateButtons(index);
+}
+
+function updateButtons(index = getCurrentIndex()) {
+  prevBtn.disabled = index === 0;
+  nextBtn.disabled = index >= images.length - 1;
+}
 
 prevBtn.addEventListener('click', () => {
-  goToImage(current - 1);
+  const current = getCurrentIndex();
+  goTo(current - 1);
 });
+
+nextBtn.addEventListener('click', () => {
+  const current = getCurrentIndex();
+  goTo(current + 1);
+});
+
+viewport.addEventListener('scroll', () => {
+  updateButtons();
+});
+
+window.addEventListener('load', updateButtons);
+window.addEventListener('resize', updateButtons);

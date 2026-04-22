@@ -1,8 +1,19 @@
 [
   {
+  "year": 2026,
+  "headline": "Upcoming - IEEE ISPSD",
+  "description": "Prof. Zhang will serve as <a href='https://www.ispsd2026.com' target='_blank' rel='noopener noreferrer'>2026 IEEE 38th International Symposium on Power Semiconductor Devices and ICs (ISPSD)</a> Power IC Design (ICD) Chair.",
+  "photos": [
+    {
+      "image": "assets/apecmeeting.jpg",
+      "caption": ""
+    }
+  ]
+ },
+  {
     "year": 2026,
     "headline": "APEC Conference",
-    "description": "Our group participated in APEC 2026, and Prof. Zhang served as a session chair during the conference. Her student Xiangyu presented the work Self-Adjusting LFER-Based Dynamic Gate Driving Technique for Fast-Switching GaN HEMTs in 48-V Applications.",
+    "description": "Our group participated in IEEE Applied Power Electronics Conference and Exposition (APEC) 2026, and Prof. Zhang served as a session chair during the conference. Her student Xiangyu presented the work Self-Adjusting LFER-Based Dynamic Gate Driving Technique for Fast-Switching GaN HEMTs in 48-V Applications.",
     "photos": [
       {
         "image": "assets/apec2026YUchu.jpg",
@@ -20,19 +31,23 @@
   },
   {
     "year": 2025,
-    "headline": "Rising Stars 2025, Taiwan",
-    "description": "Prof. Zhang was invited to serve as a mentor for the 4th Taiwan Tech Young Entrepreneurs’ Rising Star Competition 2025.",
+    "headline": "Asian Deans’ Forum 2025 – The Rising Stars Women in Engineering Workshop",
+    "description": "Prof. Zhang was invited to serve as a mentor for the <a href='https://seng.hkust.edu.hk/news/20251208/asian-deans-forum-2025-rising-stars-women-engineering-workshop-fostered-women-academic-leaders' target='_blank' rel='noopener noreferrer'>Asian Deans’ Forum 2025 – The Rising Stars Women in Engineering Workshop</a> in Taipei, China. She offered participants valuable tips and insights on succeeding in academia as junior faculty members",
     "photos": [
       {
+        "image": "assets/risingstargp.jpg",
+        "caption": "Group photo at the Asian Deans’ Forum 2025 – The Rising Stars Women in Engineering Workshop"
+      },
+      {
         "image": "assets/rising star 2025 mentor Taiwan.jpg",
-        "caption": "Group photo at Rising Star Competition 2025"
+        "caption": "Group photo with Prof. Alicia Kyoung Jin AN (first left) and Prof. Albert Chi Shing CHUNG (first right)"
       }
     ]
   },
   {
     "year": 2025,
-    "headline": "ISPSD/ICD",
-    "description": "Prof. Zhang served as a session chair at ISPSD/ICD 2025.",
+    "headline": "ISPSD Conference",
+    "description": "Prof. Zhang served as a Power IC Design (ICD) chair at the International Symposium on Power Semiconductor Devices and ICs (ISPSD) 2025.",
     "photos": [
       {
         "image": "assets/ispsd icd.jpg",
@@ -46,8 +61,8 @@
   },
   {
     "year": 2024,
-    "headline": "ISPSD/ICD",
-    "description": "Prof. Zhang served as a session chair at ISPSD 2024.",
+    "headline": "ISPSD Conference",
+    "description": "Prof. Zhang served as a session chair at the International Symposium on Power Semiconductor Devices and ICs (ISPSD) 2024.",
     "photos": [
       {
         "image": "assets/ispsd2024_2.jpg",
@@ -62,7 +77,7 @@
   {
     "year": 2024,
     "headline": "During Her Time at ADI",
-    "description": "Before joining academia, Prof. Weijia Zhang worked at Analog Devices (ADI). Her industry experience continues to inspire our group’s research with strong practical relevance.",
+    "description": "Before joining academia, Prof. Weijia Zhang worked at Analog Device, Inc. (ADI). Her industry experience continues to inspire our group’s research with strong practical relevance.",
     "photos": [
       {
         "image": "assets/adipresent.jpg",
@@ -74,8 +89,12 @@
       },
       {
         "image": "assets/adi6.jpg",
-        "caption": "During her time at ADI"
-      }            
+        "caption": "Messy desk equals maximum productivity"
+      },
+      {
+        "image": "assets/huaxue.jpg",
+        "caption": "ADI engineers hit the slopes (Prof. Zhang, third from left)"
+      }
     ]
   } 
 ]

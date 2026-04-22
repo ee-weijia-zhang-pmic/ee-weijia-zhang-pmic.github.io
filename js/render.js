@@ -269,7 +269,16 @@ function renderPublications(data, el) {
     });
     html += '</ul></div>';
   });
-  el.innerHTML = html;
+  el.innerHTML = html + `
+  <div class="pub-note" style="margin-top: 28px; color:#666; font-size:0.95rem;">
+    <p>
+      A full list of publications, including work prior to joining HKUST, is available on
+      <a href="https://scholar.google.com/citations?user=7OlewaoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+        Google Scholar
+      </a>.
+    </p>
+  </div>
+`;
 }
 /* ── home gallery ───────────────────────────────────────────── */
 const track = document.querySelector('.drag-scroll');

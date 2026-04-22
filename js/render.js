@@ -280,33 +280,28 @@ function renderPublications(data, el) {
   </div>
 `;
 }
-/* ── home gallery ───────────────────────────────────────────── */
-const track = document.querySelector('.drag-scroll');
+/* ── home gallery slider ───────────────────────────── */
 
-let isDown = false;
-let startX;
-let scrollLeft;
+const galleryTrack = document.querySelector('.gallery-track');
+const slides = document.querySelectorAll('.gallery-track img');
+const prevBtn = document.querySelector('.gallery-btn.prev');
+const nextBtn = document.querySelector('.gallery-btn.next');
 
-track.addEventListener('mousedown', (e) => {
-  isDown = true;
-  track.style.cursor = 'grabbing';
-  startX = e.pageX - track.offsetLeft;
-  scrollLeft = track.scrollLeft;
+let currentIndex = 0;
+const totalSlides = slides.length;
+
+function updateGallery() {
+  galleryTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  currentIndex++;
+  if (currentIndex >= totalSlides) currentIndex = 0;
+  updateGallery();
 });
 
-track.addEventListener('mouseleave', () => {
-  isDown = false;
-});
-
-track.addEventListener('mouseup', () => {
-  isDown = false;
-  track.style.cursor = 'grab';
-});
-
-track.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - track.offsetLeft;
-  const walk = (x - startX) * 1.5;
-  track.scrollLeft = scrollLeft - walk;
+prevBtn.addEventListener('click', () => {
+  currentIndex--;
+  if (currentIndex < 0) currentIndex = totalSlides - 1;
+  updateGallery();
 });

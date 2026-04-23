@@ -213,16 +213,23 @@ function renderResearch(data, el) {
         <h2>${sec.title}</h2>
         <div class="research-section">
     `;
-
-    groups[sec.key].forEach(topic => {
-      html += `
-        <div class="research-topic">
-          <h3>${topic.title}</h3>
-          <p>${topic.description}</p>
-          ${topic.image ? `<img src="${topic.image}" alt="${topic.title}">` : ''}
-        </div>
-      `;
-    });
+     
+   groups[sec.key].forEach(topic => {
+     html += `
+       <div class="research-topic">
+   
+         <div class="research-image">
+           ${topic.image ? `<img src="${topic.image}" alt="${topic.title}">` : ''}
+         </div>
+   
+         <div class="research-content">
+           ${topic.title ? `<h3>${topic.title}</h3>` : ''}
+           <p>${topic.description}</p>
+         </div>
+   
+       </div>
+     `;
+   });
 
     html += `</div></section>`;
   });

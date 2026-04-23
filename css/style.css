@@ -584,7 +584,7 @@ p {
   hyphens: auto;
   overflow-wrap: break-word;
 }
-}
+   
 /* ---------- research ---------- */
 .research-topic {
   grid-template-columns: 1fr;
@@ -614,7 +614,7 @@ p {
   max-height: none;
   object-fit: contain;
 }
-
+}
 
 /* ── Gallery Slider ───────────────────────────── */
 

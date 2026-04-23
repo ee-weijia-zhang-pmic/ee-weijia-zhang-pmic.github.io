@@ -635,9 +635,8 @@ p {
 .gallery-track img {
   height: clamp(275px, 31vw, 525px);
   width: auto;
-  max-width: 100%;
+  max-width: none;
   flex-shrink: 0;
-
   object-fit: contain;
   background: #f5f7fa;
   border-radius: 10px;
@@ -676,7 +675,9 @@ p {
 }
 
 .gallery-track a {
-  display: inline-block;
+  display: flex;
+  flex: 0 0 auto;
+  width: fit-content;
   text-decoration: none;
 }
 

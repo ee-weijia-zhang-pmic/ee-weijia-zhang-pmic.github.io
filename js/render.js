@@ -195,7 +195,7 @@ function renderResearch(data, el) {
     },
     {
       id: "wbg",
-      title: "Wide-Bandgap Devices & System Integration",
+      title: "Devices & System Integration",
       key: "wbg_system"
     },
     {

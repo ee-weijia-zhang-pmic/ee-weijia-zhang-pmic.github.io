@@ -214,22 +214,33 @@ function renderResearch(data, el) {
         <div class="research-section">
     `;
      
-   groups[sec.key].forEach(topic => {
-     html += `
-       <div class="research-topic">
-   
-         <div class="research-image">
-           ${topic.image ? `<img src="${topic.image}" alt="${topic.title}">` : ''}
-         </div>
-   
-         <div class="research-content">
-           ${topic.title ? `<h3>${topic.title}</h3>` : ''}
-           <p>${topic.description}</p>
-         </div>
-   
-       </div>
-     `;
-   });
+groups[sec.key].forEach((topic, index) => {
+
+  const topicIds = {
+    "Smart Switch for Wide-Bandgap Devices": "smart-switch",
+    "Monolithic Novel IC Platform": "monolithic-ic",
+    "Wide-Bandgap Power Devices Multi-physics Sensing and Predictive Control": "multi-physics",
+    "Power Delivery for Next-Generation Computational Hardware": "power-delivery",
+    "": "ai-topic"
+  };
+
+  const topicId = topicIds[topic.title] || `topic-${index}`;
+
+  html += `
+    <div class="research-topic" id="${topicId}">
+
+      <div class="research-image">
+        ${topic.image ? `<img src="${topic.image}" alt="${topic.title}">` : ''}
+      </div>
+
+      <div class="research-content">
+        ${topic.title ? `<h3>${topic.title}</h3>` : ''}
+        <p>${topic.description}</p>
+      </div>
+
+    </div>
+  `;
+});
 
     html += `</div></section>`;
   });

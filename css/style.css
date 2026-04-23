@@ -586,15 +586,29 @@ p {
 }
    
 /* ---------- Research ---------- */
-.research-text {
-  order: 1;
+
+.research-topic {
+  display: flex;
+  flex-direction: column;  
+  gap: 1rem;
+}
+
+.research-content {
   width: 100%;
+  order: 1;
 }
 
 .research-image {
-  order: 2;
   width: 100%;
-  margin-top: 1rem;
+  order: 2;
+  margin-top: 0;
+}
+
+.research-image img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
 }
 }
 

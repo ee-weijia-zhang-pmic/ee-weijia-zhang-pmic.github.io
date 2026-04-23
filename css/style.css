@@ -635,7 +635,7 @@ p {
 .gallery-track img {
   height: clamp(275px, 31vw, 525px);
   width: auto;
-  max-width: none;
+  max-width: min(92vw, 900px);
   flex-shrink: 0;
   object-fit: contain;
   background: #f5f7fa;

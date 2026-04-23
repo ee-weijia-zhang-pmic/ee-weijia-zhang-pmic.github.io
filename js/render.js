@@ -301,28 +301,28 @@ function renderPublications(data, el) {
 /* ── home gallery ───────────────────────────── */
 
 const viewport = document.querySelector('.gallery-viewport');
-const images = document.querySelectorAll('.gallery-track img');
+const items = document.querySelectorAll('.gallery-track a');
 const prevBtn = document.querySelector('.gallery-btn.prev');
 const nextBtn = document.querySelector('.gallery-btn.next');
 
 function getCurrentIndex() {
   const left = viewport.scrollLeft;
 
-  for (let i = 0; i < images.length; i++) {
-    if (images[i].offsetLeft >= left - 5) {
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].offsetLeft >= left - 5) {
       return i;
     }
   }
 
-  return images.length - 1;
+  return items.length - 1;
 }
 
 function goTo(index) {
   if (index < 0) index = 0;
-  if (index > images.length - 1) index = images.length - 1;
+  if (index > items.length - 1) index = items.length - 1;
 
   viewport.scrollTo({
-    left: images[index].offsetLeft,
+    left: items[index].offsetLeft,
     behavior: 'smooth'
   });
 
@@ -331,22 +331,17 @@ function goTo(index) {
 
 function updateButtons(index = getCurrentIndex()) {
   prevBtn.disabled = index === 0;
-  nextBtn.disabled = index >= images.length - 1;
+  nextBtn.disabled = index >= items.length - 1;
 }
 
 prevBtn.addEventListener('click', () => {
-  const current = getCurrentIndex();
-  goTo(current - 1);
+  goTo(getCurrentIndex() - 1);
 });
 
 nextBtn.addEventListener('click', () => {
-  const current = getCurrentIndex();
-  goTo(current + 1);
+  goTo(getCurrentIndex() + 1);
 });
 
-viewport.addEventListener('scroll', () => {
-  updateButtons();
-});
-
+viewport.addEventListener('scroll', updateButtons);
 window.addEventListener('load', updateButtons);
 window.addEventListener('resize', updateButtons);

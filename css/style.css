@@ -113,7 +113,7 @@ nav a.active {
 
 /* ── Page body ──────────────────────────────────────────────── */
 main {
-  padding: 3rem 0 4rem;
+  padding: 2rem 0 4rem;
 }
 
 .page-title {
@@ -138,20 +138,20 @@ section h2 {
 .hero {
   background: var(--bg-alt);
   border-radius: 8px;
-  padding: 2.5rem 2rem;
-  margin-bottom: 3rem;
+  padding: 1.87rem 2rem;
+  margin-bottom: 2rem;
 }
 
 .hero h1 {
   font-size: 2.2rem;
   color: var(--accent);
-  margin-bottom: .5rem;
+  margin-bottom: .4rem;
 }
 
 .hero .tagline {
   font-size: 1.1rem;
   color: var(--text-muted);
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 .hero p {
   text-align: justify;

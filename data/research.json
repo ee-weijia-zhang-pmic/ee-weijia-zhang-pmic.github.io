@@ -3,30 +3,30 @@
     "section": "ic_design",
     "title": "Smart Switch for Wide-Bandgap Devices",
     "description": "We develop next-generation power IC architectures and smart gate driver techniques for high-performance wide-bandgap power switches, such as Driver GaN (DrGaN). Our research focuses on ultra-fast transient response, ultra-low-noise control, loop stability, heterogeneous integration, thermal management, and device reliability for demanding applications.<br><strong>Goals:</strong><br><span style='display:block; margin-left:1.5rem;'>• Develop next-generation power IC architectures using advanced smart gate driver techniques to achieve ultra-fast transient response and ultra-low-noise control.</span><span style='display:block; margin-left:1.5rem;'>• Ensure high loop stability in DrGaN switches through heterogeneous integration and advanced packaging.</span><span style='display:block; margin-left:1.5rem;'>• Tackle physical and operational challenges through comprehensive thermal management and multi-physics analysis.</span><span style='display:block; margin-left:1.5rem;'>• Implement device reliability and aging detection methodologies to guarantee longevity and safety.</span>",
-    "image": ""
+    "image": "assets/ga7.jpg"
   },
   { 
     "section": "ic_design",
     "title": "Monolithic Novel IC Platform",
     "description": "We investigate monolithic integration platforms that combine gate driver ICs and GaN HEMTs on a single chip. Our work targets high-frequency switching, parasitic reduction, layout optimization, efficiency improvement, and thermal performance beyond the limits of conventional silicon-based smart power switches.<br><strong>Goals:</strong><br><span style='display:block; margin-left:1.5rem;'>• Design monolithic Driver GaN (DrGaN) solutions integrating driver ICs and GaN HEMTs.</span><span style='display:block; margin-left:1.5rem;'>• Apply parasitic extraction and high-frequency layout optimization to mitigate switching ringing.</span><span style='display:block; margin-left:1.5rem;'>• Prevent gate degradation caused by excessive ringing and switching stress.</span><span style='display:block; margin-left:1.5rem;'>• Push frequency scaling while meeting stringent efficiency and thermal demands.</span>",
-    "image": ""
+    "image": "assets/ga8.jpg"
   },
   { 
     "section": "wbg_system",
     "title": "Wide-Bandgap Power Devices Multi-physics Sensing and Predictive Control",
     "description": "We study sensing and control techniques for next-generation high-power systems under extreme electrical and thermal stress. Topics include ultra-fast over-current protection, low-latency sensing circuits, multi-physics modeling, thermal correction, predictive control, and reliability-oriented failure analysis.<br><strong>Goals:</strong><br><span style='display:block; margin-left:1.5rem;'>• Design ultra-fast over-current protection (OCP) and sensing circuits to minimize latency and prevent failures.</span><span style='display:block; margin-left:1.5rem;'>• Utilize multi-physics modeling and thermal gradient analysis to correct sensing non-linearities.</span><span style='display:block; margin-left:1.5rem;'>• Develop predictive control algorithms for safe and predictable operation.</span><span style='display:block; margin-left:1.5rem;'>• Simplify aging diagnosis by accounting for temperature-induced switching variations.</span>",
-    "image": ""
+    "image": "assets/ga4.jpg"
   },
   {
     "section": "wbg_system",
     "title": "Power Delivery for Next-Generation Computational Hardware",
     "description": "We develop advanced HV-to-core power architectures and control strategies for future computing platforms using advanced technology nodes (16–65 nm). Our research includes coupled inductors, multi-phase converters, current sensing, constant on-time control, and integrated passive components for high-current and high-efficiency power delivery.<br><strong>Goals:</strong><br><span style='display:block; margin-left:1.5rem;'>• Model and design high-efficiency coupled inductor HV-to-core architectures using advanced node IC design.</span><span style='display:block; margin-left:1.5rem;'>• Develop robust control strategies based on Constant On-Time (CoT) and multi-phase current balancing.</span><span style='display:block; margin-left:1.5rem;'>• Create accurate current sensing using SenseFET and DCR sensing methodologies.</span><span style='display:block; margin-left:1.5rem;'>• Design novel on-chip passive filters to meet massive computational power demands.</span>",
-    "image": ""
+    "image": "assets/ga5.jpg"
   },
   {
     "section": "ai",
     "title": "",
     "description": "We explore how artificial intelligence can enhance modern power electronics systems. Our work includes AI agents for automated measurement analysis, adaptive feedback tuning, neural-network-based predictive control, hybrid digital-analog frameworks, and intelligent multi-objective optimization for real-world power converters.<br><strong>Goals:</strong><br><span style='display:block; margin-left:1.5rem;'>• Deploy specialized AI agents to automate real-time measurement analysis and dynamically adjust control parameters.</span><span style='display:block; margin-left:1.5rem;'>• Develop unified generative models and neural-network-based predictive transient tuning.</span><span style='display:block; margin-left:1.5rem;'>• Apply advanced optimization algorithms such as space partitioning, greedy random search, and hill climbing.</span><span style='display:block; margin-left:1.5rem;'>• Benchmark AI-driven tuning against expert human performance to ensure target phase and gain margins.</span>",
-    "image": ""
+    "image": "assets/ga2.jpg"
   }
 ]

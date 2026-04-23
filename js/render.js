@@ -299,49 +299,52 @@ function renderPublications(data, el) {
 `;
 }
 /* ── home gallery ───────────────────────────── */
+window.addEventListener('load', () => {
 
-const viewport = document.querySelector('.gallery-viewport');
-const items = document.querySelectorAll('.gallery-track a');
-const prevBtn = document.querySelector('.gallery-btn.prev');
-const nextBtn = document.querySelector('.gallery-btn.next');
+  const viewport = document.querySelector('.gallery-viewport');
+  const items = document.querySelectorAll('.gallery-track a');
+  const prevBtn = document.querySelector('.gallery-btn.prev');
+  const nextBtn = document.querySelector('.gallery-btn.next');
 
-function getCurrentIndex() {
-  const left = viewport.scrollLeft;
+  if (!viewport || !items.length) return;
 
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].offsetLeft >= left - 5) {
-      return i;
+  function getCurrentIndex() {
+    const left = viewport.scrollLeft;
+
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].offsetLeft >= left - 5) {
+        return i;
+      }
     }
+    return items.length - 1;
   }
 
-  return items.length - 1;
-}
+  function goTo(index) {
+    index = Math.max(0, Math.min(index, items.length - 1));
 
-function goTo(index) {
-  if (index < 0) index = 0;
-  if (index > items.length - 1) index = items.length - 1;
+    viewport.scrollTo({
+      left: items[index].offsetLeft,
+      behavior: 'smooth'
+    });
 
-  viewport.scrollTo({
-    left: items[index].offsetLeft,
-    behavior: 'smooth'
+    updateButtons(index);
+  }
+
+  function updateButtons(index = getCurrentIndex()) {
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === items.length - 1;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    goTo(getCurrentIndex() - 1);
   });
 
-  updateButtons(index);
-}
+  nextBtn.addEventListener('click', () => {
+    goTo(getCurrentIndex() + 1);
+  });
 
-function updateButtons(index = getCurrentIndex()) {
-  prevBtn.disabled = index === 0;
-  nextBtn.disabled = index >= items.length - 1;
-}
+  viewport.addEventListener('scroll', updateButtons);
+  window.addEventListener('resize', updateButtons);
 
-prevBtn.addEventListener('click', () => {
-  goTo(getCurrentIndex() - 1);
+  updateButtons();
 });
-
-nextBtn.addEventListener('click', () => {
-  goTo(getCurrentIndex() + 1);
-});
-
-viewport.addEventListener('scroll', updateButtons);
-window.addEventListener('load', updateButtons);
-window.addEventListener('resize', updateButtons);

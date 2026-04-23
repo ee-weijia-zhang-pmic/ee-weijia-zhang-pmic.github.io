@@ -113,7 +113,7 @@ nav a.active {
 
 /* ── Page body ──────────────────────────────────────────────── */
 main {
-  padding: 2rem 0 4rem;
+  padding: 2rem 0 3rem;
 }
 
 .page-title {
@@ -125,7 +125,7 @@ main {
 }
 
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 section h2 {

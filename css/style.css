@@ -391,6 +391,7 @@ section h2 {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--border);
+  scroll-margin-top: 90px;
 }
 
 .research-topic:last-child {
@@ -675,12 +676,12 @@ p {
 }
 
 .gallery-track a {
-  display: block;
-  flex: 0 0 auto;
+  display: inline-block;
   text-decoration: none;
 }
 
 .gallery-track a img {
+  display: block;
   cursor: pointer;
   transition: transform 0.25s ease;
 }

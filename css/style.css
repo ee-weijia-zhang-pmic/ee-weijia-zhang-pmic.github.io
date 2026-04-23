@@ -388,7 +388,7 @@ section h2 {
   gap: 2rem;
   align-items: center;
 
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--border);
 }
@@ -399,11 +399,7 @@ section h2 {
   border-bottom: none;
 }
 
-.research-topic p {
-  margin-bottom: 0.5rem;
-  text-align: justify;
-}
-
+/* 左边图片区 */
 .research-image img {
   width: 100%;
   height: 320px;
@@ -411,6 +407,8 @@ section h2 {
   border-radius: 8px;
   border: 1px solid var(--border);
 }
+
+/* 右边文字区 */
 .research-content h3 {
   margin-bottom: 0.75rem;
   color: var(--accent);
@@ -419,9 +417,6 @@ section h2 {
 .research-content p {
   margin-bottom: 0;
   text-align: justify;
-}
-section {
-  scroll-margin-top: 80px;
 }
 
 /* ── Publications ───────────────────────────────────────────── */

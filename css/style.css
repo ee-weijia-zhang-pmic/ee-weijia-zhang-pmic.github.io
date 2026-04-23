@@ -594,7 +594,26 @@ p {
   height: auto;
   max-height: 320px;
 }
+.research-topic {
+  display: flex;
+  flex-direction: column;
+}
 
+.research-topic .research-text {
+  order: 1;
+}
+
+.research-topic .research-image {
+  order: 2;
+  margin-top: 1rem;
+}
+
+.research-topic .research-image img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
 
 
 /* ── Gallery Slider ───────────────────────────── */

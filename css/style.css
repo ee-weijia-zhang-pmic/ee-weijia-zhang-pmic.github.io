@@ -585,34 +585,29 @@ p {
   overflow-wrap: break-word;
 }
    
-/* ---------- research ---------- */
-.research-topic {
-  grid-template-columns: 1fr;
-}
-
-.research-image img {
-  height: auto;
-  max-height: 320px;
-}
+/* ---------- Research ---------- */
 .research-topic {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
-.research-topic .research-text {
+.research-text {
   order: 1;
+  width: 100%;
 }
 
-.research-topic .research-image {
+.research-image {
   order: 2;
+  width: 100%;
   margin-top: 1rem;
 }
 
-.research-topic .research-image img {
+.research-image img {
   width: 100%;
   height: auto;
-  max-height: none;
   object-fit: contain;
+  max-height: none;
 }
 }
 

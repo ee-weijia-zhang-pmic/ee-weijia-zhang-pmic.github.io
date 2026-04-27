@@ -15,7 +15,7 @@
     "section": "wbg_system",
     "title": "Wide-Bandgap Power Devices Multi-physics Sensing and Predictive Control",
     "description": "<strong>Goals:</strong><br><span style='display:block; margin-left:1.5rem;'>• Design ultra-fast over-current protection (OCP) and sensing circuits to minimize latency and prevent failures.</span><span style='display:block; margin-left:1.5rem;'>• Utilize multi-physics modeling and thermal gradient analysis to correct sensing non-linearities.</span><span style='display:block; margin-left:1.5rem;'>• Develop predictive control algorithms for safe and predictable operation.</span><span style='display:block; margin-left:1.5rem;'>• Simplify aging diagnosis by accounting for temperature-induced switching variations.</span>",
-    "image": "assets/powerdevice.jpg"
+    "image": "assets/powerdevice2.jpg"
   },
   {
     "section": "wbg_system",

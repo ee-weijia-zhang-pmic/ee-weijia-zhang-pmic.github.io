@@ -611,6 +611,10 @@ p {
   max-height: none;
   object-fit: contain;
 }
+.research-topic,
+section {
+  scroll-margin-top: 140px;
+}
 }
 
 /* ── Gallery Slider ───────────────────────────── */

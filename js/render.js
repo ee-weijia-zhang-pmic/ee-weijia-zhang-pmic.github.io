@@ -268,51 +268,89 @@ function renderPublications(data, el) {
   </div>
 `;
 }
-/* ── home gallery ───────────────────────────── */
+/* ── Infinite Gallery Slider ───────────────────────────── */
 window.addEventListener('load', () => {
 
   const viewport = document.querySelector('.gallery-viewport');
   const track = document.querySelector('.gallery-track');
-  const items = document.querySelectorAll('.gallery-track a');
   const prevBtn = document.querySelector('.gallery-btn.prev');
   const nextBtn = document.querySelector('.gallery-btn.next');
 
-  if (!viewport || !items.length) return;
+  if (!viewport || !track) return;
 
-  let current = 0;
+  const originalItems = Array.from(track.children);
+  const showCount = window.innerWidth <= 768 ? 1 : 2; // 手机1张，电脑2张
+  const cloneCount = showCount;
 
-  function getStep() {
-    return items[0].offsetWidth + 20; // 图片宽 + gap
+  /* ===== 建立首尾克隆 ===== */
+  const headClones = originalItems
+    .slice(0, cloneCount)
+    .map(el => el.cloneNode(true));
+
+  const tailClones = originalItems
+    .slice(-cloneCount)
+    .map(el => el.cloneNode(true));
+
+  tailClones.forEach(el => track.prepend(el));
+  headClones.forEach(el => track.append(el));
+
+  const items = Array.from(track.children);
+
+  let current = cloneCount;
+  let isMoving = false;
+
+  function itemWidth() {
+    const style = getComputedStyle(track);
+    const gap = parseFloat(style.columnGap || style.gap || 0);
+    return items[0].offsetWidth + gap;
   }
 
-  function visibleCount() {
-    return window.innerWidth <= 768 ? 1 : 2;
+  function jumpTo(index) {
+    viewport.scrollLeft = index * itemWidth();
   }
 
-  function maxIndex() {
-    return items.length - visibleCount();
-  }
-
-  function goTo(index) {
-    current = Math.max(0, Math.min(index, maxIndex()));
+  function goTo(index, smooth = true) {
+    if (isMoving) return;
+    isMoving = true;
+    current = index;
 
     viewport.scrollTo({
-      left: current * getStep(),
-      behavior: 'smooth'
+      left: index * itemWidth(),
+      behavior: smooth ? 'smooth' : 'auto'
     });
 
-    updateButtons();
+    setTimeout(() => {
+      fixLoop();
+      isMoving = false;
+    }, 420);
   }
 
-  function updateButtons() {
-    prevBtn.disabled = current === 0;
-    nextBtn.disabled = current >= maxIndex();
+  function fixLoop() {
+    const totalReal = originalItems.length;
+
+    if (current >= totalReal + cloneCount) {
+      current = cloneCount;
+      jumpTo(current);
+    }
+
+    if (current < cloneCount) {
+      current = totalReal + cloneCount - 1;
+      jumpTo(current);
+    }
   }
 
-  prevBtn.addEventListener('click', () => goTo(current - 1));
-  nextBtn.addEventListener('click', () => goTo(current + 1));
+  prevBtn.addEventListener('click', () => {
+    goTo(current - 1);
+  });
 
-  window.addEventListener('resize', () => goTo(current));
+  nextBtn.addEventListener('click', () => {
+    goTo(current + 1);
+  });
 
-  updateButtons();
+  window.addEventListener('resize', () => {
+    jumpTo(current);
+  });
+
+  /* 初始定位到真实第一页 */
+  jumpTo(current);
 });

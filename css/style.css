@@ -703,9 +703,6 @@ section {
 .gallery-btn.prev { right: 58px; }
 .gallery-btn.next { right: 10px; }
 
-.gallery-btn:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
 }
 
 @media (max-width: 768px) {

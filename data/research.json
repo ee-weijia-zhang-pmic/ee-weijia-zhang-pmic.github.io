@@ -1,29 +1,29 @@
 [
   {
     "id": "smart-switch",
-    "title": "Smart Switch for Wide-Bandgap Devices",
-    "description": "• Next-Gen smart switch.<br>• Heterogeneous integration.<br>• Thermal management and multi-physics analysis.<br>• Device reliability and aging detection.<br>• Advanced packaging.",
+    "title": "Intelligent Power ICs for Wide-Bandgap Devices",
+    "description": "• Next-generation smart switches.<br>• Monolithic and heterogeneous integration.<br>• Thermal management and multi-physics analysis.<br>• Device reliability and aging detection.<br>• Advanced packaging.",
     "image": "assets/ezgif.com-animated-gif-maker.gif"
   },
 
   {
     "id": "multi-physics",
     "title": "Multi-physics Sensing and Predictive Control",
-    "description": "• Advanced sensing circuits for multi-phase current balancing.<br>• Integrated SenseFET and DCR sensing methodologies.<br>• Control algorithms for predictable operation.<br>• Temp-coefficient correction and on-chip LC design.",
+    "description": "• Advanced sensing circuits for multi-phase current balancing.<br>• Integrated SenseFET and DCR sensing methodologies.<br>• Predictive and robust control algorithms.<br>• Temp-coefficient compensation and on-chip LC design.",
     "image": "assets/R2.jpg"
   },
 
   {
     "id": "ai",
     "title": "AI-Assisted Power Applications",
-    "description": "• Deploy AI agents for dynamical control.<br>• Develop NN-based transient tuning.<br>• Advanced optimization algorithms for power application.",
+    "description": "• AI agents for autonomous measurement and dynamic control.<br>• Neural-network-based transient tuning.<br>• Advanced optimization algorithms for power application.",
     "image": "assets/AI.jpg"
   },
 
   {
     "id": "emerging",
     "title": "Emerging Novel Applications",
-    "description": "• Optical communication.<br>• Deep-space illumination.<br>• Humanoid robots.<br>• Wide temp range applications.",
+    "description": "• Power solutions for high-speed optical communication systems.<br>• Aerospace and deep-space electronics.<br>• High-density power systems for humanoid robots.<br>• Wide temp range applications.",
     "image": "assets/R4-new.jpg"
   }
 ]

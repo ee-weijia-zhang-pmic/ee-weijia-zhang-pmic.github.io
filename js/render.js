@@ -192,7 +192,12 @@ function renderResearch(data, el) {
             </div>
 
             <div class="research-content">
-              <p>${item.description}</p>
+               <div class="research-lines">
+                 ${item.description
+                   .split('<br>')
+                   .map(line => `<div class="research-line">${line}</div>`)
+                   .join('')}
+               </div>
             </div>
 
           </div>

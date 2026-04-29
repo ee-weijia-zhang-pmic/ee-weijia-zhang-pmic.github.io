@@ -652,8 +652,10 @@ section {
 .gallery-track {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% - 20px) / 2); /* 一屏两张 */
   gap: 20px;
+
+  /* 默认普通电脑：2张 */
+  grid-auto-columns: calc((100% - 14px) / 2);
 }
 
 .gallery-track a {
@@ -705,10 +707,21 @@ section {
 
 }
 
+/* 大屏幕：3张 */
+@media (min-width: 1600px) {
+  .gallery-track {
+    grid-auto-columns: calc((100% - 28px) / 3);
+  }
+}
+
+/* 普通电脑：2张（默认） */
+
+/* 手机：1张 */
 @media (max-width: 768px) {
   .gallery-track {
-    grid-auto-columns: 100%;
+    grid-auto-columns: 100% !important;
   }
+
   .gallery-track a {
     height: 260px;
   }

@@ -272,49 +272,47 @@ function renderPublications(data, el) {
 window.addEventListener('load', () => {
 
   const viewport = document.querySelector('.gallery-viewport');
+  const track = document.querySelector('.gallery-track');
   const items = document.querySelectorAll('.gallery-track a');
   const prevBtn = document.querySelector('.gallery-btn.prev');
   const nextBtn = document.querySelector('.gallery-btn.next');
 
   if (!viewport || !items.length) return;
 
-  function getCurrentIndex() {
-    const left = viewport.scrollLeft;
+  let current = 0;
 
-    for (let i = 0; i < items.length; i++) {
-      if (items[i].offsetLeft >= left - 5) {
-        return i;
-      }
-    }
-    return items.length - 1;
+  function getStep() {
+    return items[0].offsetWidth + 20; // 图片宽 + gap
+  }
+
+  function visibleCount() {
+    return window.innerWidth <= 768 ? 1 : 2;
+  }
+
+  function maxIndex() {
+    return items.length - visibleCount();
   }
 
   function goTo(index) {
-    index = Math.max(0, Math.min(index, items.length - 1));
+    current = Math.max(0, Math.min(index, maxIndex()));
 
     viewport.scrollTo({
-      left: items[index].offsetLeft,
+      left: current * getStep(),
       behavior: 'smooth'
     });
 
-    updateButtons(index);
+    updateButtons();
   }
 
-  function updateButtons(index = getCurrentIndex()) {
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === items.length - 1;
+  function updateButtons() {
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current >= maxIndex();
   }
 
-  prevBtn.addEventListener('click', () => {
-    goTo(getCurrentIndex() - 1);
-  });
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
 
-  nextBtn.addEventListener('click', () => {
-    goTo(getCurrentIndex() + 1);
-  });
-
-  viewport.addEventListener('scroll', updateButtons);
-  window.addEventListener('resize', updateButtons);
+  window.addEventListener('resize', () => goTo(current));
 
   updateButtons();
 });

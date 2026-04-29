@@ -118,6 +118,12 @@ function initImageZoom() {
 
   if (!modal || !modalImg) return;
 
+  let scale = 1;
+
+  function applyZoom() {
+    modalImg.style.transform = `scale(${scale})`;
+  }
+
   const imgs = document.querySelectorAll(
     '.pi-card img, .person-card img, .group-photo-item img'
   );
@@ -126,6 +132,8 @@ function initImageZoom() {
     img.addEventListener('click', () => {
       modalImg.src = img.src;
       modalImg.alt = img.alt || '';
+      scale = 1;
+      applyZoom();
       modal.classList.add('show');
     });
   });
@@ -139,6 +147,22 @@ function initImageZoom() {
       modal.classList.remove('show');
     }
   });
+
+  /* 鼠标滚轮缩放 */
+  modal.addEventListener('wheel', e => {
+    if (!modal.classList.contains('show')) return;
+
+    e.preventDefault();
+
+    if (e.deltaY < 0) {
+      scale += 0.12;   // 向上滚：放大
+    } else {
+      scale -= 0.12;   // 向下滚：缩小
+    }
+
+    scale = Math.max(0.4, Math.min(scale, 5)); // 最小0.4倍，最大5倍
+    applyZoom();
+  }, { passive: false });
 }
 /* ── News ───────────────────────────────────────────────────── */
 function renderNews(data, el) {

@@ -202,6 +202,20 @@ function renderResearch(data, el) {
   });
 
   el.innerHTML = html;
+   
+     /* 页面渲染完成后再执行 hash 跳转 */
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 80);
+    }
+  }
 }
 
 

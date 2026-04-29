@@ -109,7 +109,7 @@ html += `
    
 el.innerHTML = html || '<p>No people found. Add entries to data/people.json.</p>';
 }
-
+initImageZoom();
 function initImageZoom() {
   const modal = document.getElementById('imgModal');
   const modalImg = document.getElementById('imgModalContent');

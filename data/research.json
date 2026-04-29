@@ -1,32 +1,29 @@
 [
-  { 
-    "section": "ic_design",
+  {
+    "id": "smart-switch",
     "title": "Smart Switch for Wide-Bandgap Devices",
-    "description": "<strong>Goals:</strong><br><span style='display:block; margin-left:1.5rem;'>• Develop next-generation power IC architectures using advanced smart gate driver techniques to achieve ultra-fast transient response and ultra-low-noise control.</span><span style='display:block; margin-left:1.5rem;'>• Ensure high loop stability in DrGaN switches through heterogeneous integration and advanced packaging.</span><span style='display:block; margin-left:1.5rem;'>• Tackle physical and operational challenges through comprehensive thermal management and multi-physics analysis.</span><span style='display:block; margin-left:1.5rem;'>• Implement device reliability and aging detection methodologies to guarantee longevity and safety.</span>",
-    "image": "assets/switch.jpg"
+    "description": "• Next-Gen smart switch.<br>• Heterogeneous integration.<br>• Thermal management and multi-physics analysis.<br>• Device reliability and aging detection.<br>• Advanced packaging.",
+    "image": "assets/ezgif.com-animated-gif-maker.gif"
   },
-  { 
-    "section": "ic_design",
-    "title": "Monolithic Novel IC Platform",
-    "description": "<strong>Goals:</strong><br><span style='display:block; margin-left:1.5rem;'>• Design monolithic Driver GaN (DrGaN) solutions integrating driver ICs and GaN HEMTs.</span><span style='display:block; margin-left:1.5rem;'>• Apply parasitic extraction and high-frequency layout optimization to mitigate switching ringing.</span><span style='display:block; margin-left:1.5rem;'>• Prevent gate degradation caused by excessive ringing and switching stress.</span><span style='display:block; margin-left:1.5rem;'>• Push frequency scaling while meeting stringent efficiency and thermal demands.</span>",
-    "image": "assets/monolithic.jpg"
-  },
-  { 
-    "section": "wbg_system",
-    "title": "Wide-Bandgap Power Devices Multi-physics Sensing and Predictive Control",
-    "description": "<strong>Goals:</strong><br><span style='display:block; margin-left:1.5rem;'>• Design ultra-fast over-current protection (OCP) and sensing circuits to minimize latency and prevent failures.</span><span style='display:block; margin-left:1.5rem;'>• Utilize multi-physics modeling and thermal gradient analysis to correct sensing non-linearities.</span><span style='display:block; margin-left:1.5rem;'>• Develop predictive control algorithms for safe and predictable operation.</span><span style='display:block; margin-left:1.5rem;'>• Simplify aging diagnosis by accounting for temperature-induced switching variations.</span>",
-    "image": "assets/powerdevice2.jpg"
-  },
+
   {
-    "section": "wbg_system",
-    "title": "Power Delivery for Next-Generation Computational Hardware",
-    "description": "<strong>Goals:</strong><br><span style='display:block; margin-left:1.5rem;'>• Model and design high-efficiency coupled inductor HV-to-core architectures using advanced node IC design.</span><span style='display:block; margin-left:1.5rem;'>• Develop robust control strategies based on Constant On-Time (CoT) and multi-phase current balancing.</span><span style='display:block; margin-left:1.5rem;'>• Create accurate current sensing using SenseFET and DCR sensing methodologies.</span><span style='display:block; margin-left:1.5rem;'>• Design novel on-chip passive filters to meet massive computational power demands.</span>",
-    "image": "assets/powerdelivery.jpg"
+    "id": "multi-physics",
+    "title": "Multi-physics Sensing and Predictive Control",
+    "description": "• Advanced sensing circuits for multi-phase current balancing.<br>• Integrated SenseFET and DCR sensing methodologies.<br>• Control algorithms for predictable operation.<br>• Temp-coefficient correction and on-chip LC design.",
+    "image": "assets/R2.jpg"
   },
+
   {
-    "section": "ai",
-    "title": "",
-    "description": "<strong>Goals:</strong><br><span style='display:block; margin-left:1.5rem;'>• Deploy specialized AI agents to automate real-time measurement analysis and dynamically adjust control parameters.</span><span style='display:block; margin-left:1.5rem;'>• Develop unified generative models and neural-network-based predictive transient tuning.</span><span style='display:block; margin-left:1.5rem;'>• Apply advanced optimization algorithms such as space partitioning, greedy random search, and hill climbing.</span><span style='display:block; margin-left:1.5rem;'>• Benchmark AI-driven tuning against expert human performance to ensure target phase and gain margins.</span>",
+    "id": "ai",
+    "title": "AI-Assisted Power Applications",
+    "description": "• Deploy AI agents for dynamical control.<br>• Develop NN-based transient tuning.<br>• Advanced optimization algorithms for power application.",
     "image": "assets/AI.jpg"
+  },
+
+  {
+    "id": "emerging",
+    "title": "Emerging Novel Applications",
+    "description": "• Optical communication.<br>• Deep-space illumination.<br>• Humanoid robots.<br>• Wide temp range applications.",
+    "image": "assets/R4.jpg"
   }
 ]

@@ -635,14 +635,6 @@ section {
 .research-line {
   margin-bottom: 1rem;
 }
-/* ---------- gallery ---------- */
-.gallery-track {
-   grid-auto-columns: 100%;
-  }
-
-.gallery-track a {
-   height: 260px;
-  }   
 }
 
 /* ── Gallery Slider ───────────────────────────── */
@@ -714,4 +706,13 @@ section {
 .gallery-btn:disabled {
   opacity: 0.35;
   cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .gallery-track {
+    grid-auto-columns: 100%;
+  }
+  .gallery-track a {
+    height: 260px;
+  }
 }

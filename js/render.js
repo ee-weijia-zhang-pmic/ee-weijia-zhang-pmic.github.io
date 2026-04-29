@@ -269,8 +269,25 @@ function renderPublications(data, el) {
 `;
 }
 /* ── Infinite Gallery Slider ───────────────────────────── */
-window.addEventListener('load', () => {
+window.addEventListener('load', initGallery);
+window.addEventListener('resize', rebuildGallery);
 
+let galleryBuilt = false;
+
+function getShowCount() {
+  return window.innerWidth <= 768 ? 1 : 2;
+}
+
+function initGallery() {
+  buildGallery();
+}
+
+function rebuildGallery() {
+  clearTimeout(window._galleryResizeTimer);
+  window._galleryResizeTimer = setTimeout(buildGallery, 200);
+}
+
+function buildGallery() {
   const viewport = document.querySelector('.gallery-viewport');
   const track = document.querySelector('.gallery-track');
   const prevBtn = document.querySelector('.gallery-btn.prev');
@@ -278,79 +295,77 @@ window.addEventListener('load', () => {
 
   if (!viewport || !track) return;
 
-  const originalItems = Array.from(track.children);
-  const showCount = window.innerWidth <= 768 ? 1 : 2; // 手机1张，电脑2张
+  /* 还原原始内容 */
+  if (galleryBuilt && track.dataset.original) {
+    track.innerHTML = track.dataset.original;
+  } else if (!track.dataset.original) {
+    track.dataset.original = track.innerHTML;
+  }
+
+  const originals = Array.from(track.children);
+  const showCount = getShowCount();
   const cloneCount = showCount;
 
-  /* ===== 建立首尾克隆 ===== */
-  const headClones = originalItems
-    .slice(0, cloneCount)
-    .map(el => el.cloneNode(true));
+  /* 克隆 */
+  const head = originals.slice(0, cloneCount).map(el => el.cloneNode(true));
+  const tail = originals.slice(-cloneCount).map(el => el.cloneNode(true));
 
-  const tailClones = originalItems
-    .slice(-cloneCount)
-    .map(el => el.cloneNode(true));
-
-  tailClones.forEach(el => track.prepend(el));
-  headClones.forEach(el => track.append(el));
+  tail.forEach(el => track.prepend(el));
+  head.forEach(el => track.append(el));
 
   const items = Array.from(track.children);
-
   let current = cloneCount;
-  let isMoving = false;
+  let moving = false;
 
-  function itemWidth() {
-    const style = getComputedStyle(track);
-    const gap = parseFloat(style.columnGap || style.gap || 0);
-    return items[0].offsetWidth + gap;
+  function gap() {
+    return parseFloat(getComputedStyle(track).gap || 0);
   }
 
-  function jumpTo(index) {
-    viewport.scrollLeft = index * itemWidth();
+  function cardWidth() {
+    return items[0].offsetWidth + gap();
   }
 
-  function goTo(index, smooth = true) {
-    if (isMoving) return;
-    isMoving = true;
-    current = index;
-
+  function scrollToIndex(index, smooth = true) {
     viewport.scrollTo({
-      left: index * itemWidth(),
+      left: index * cardWidth(),
       behavior: smooth ? 'smooth' : 'auto'
     });
+  }
+
+  function jump(index) {
+    current = index;
+    scrollToIndex(index, false);
+  }
+
+  function move(dir) {
+    if (moving) return;
+    moving = true;
+
+    current += dir;
+    scrollToIndex(current, true);
 
     setTimeout(() => {
-      fixLoop();
-      isMoving = false;
+      const total = originals.length;
+
+      /* 到最右复制区 */
+      if (current >= total + cloneCount) {
+        current = cloneCount;
+        scrollToIndex(current, false);
+      }
+
+      /* 到最左复制区 */
+      if (current < cloneCount) {
+        current = total;
+        scrollToIndex(current, false);
+      }
+
+      moving = false;
     }, 420);
   }
 
-  function fixLoop() {
-    const totalReal = originalItems.length;
+  prevBtn.onclick = () => move(-1);
+  nextBtn.onclick = () => move(1);
 
-    if (current >= totalReal + cloneCount) {
-      current = cloneCount;
-      jumpTo(current);
-    }
-
-    if (current < cloneCount) {
-      current = totalReal + cloneCount - 1;
-      jumpTo(current);
-    }
-  }
-
-  prevBtn.addEventListener('click', () => {
-    goTo(current - 1);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    goTo(current + 1);
-  });
-
-  window.addEventListener('resize', () => {
-    jumpTo(current);
-  });
-
-  /* 初始定位到真实第一页 */
-  jumpTo(current);
-});
+  jump(current);
+  galleryBuilt = true;
+}

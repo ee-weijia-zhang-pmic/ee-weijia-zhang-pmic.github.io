@@ -110,6 +110,35 @@ html += `
 el.innerHTML = html || '<p>No people found. Add entries to data/people.json.</p>';
 }
 
+function initImageZoom() {
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('imgModalContent');
+  const closeBtn = document.querySelector('.img-close');
+
+  if (!modal || !modalImg) return;
+
+  const imgs = document.querySelectorAll(
+    '.pi-card img, .person-card img, .group-photo-item img'
+  );
+
+  imgs.forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src;
+      modalImg.alt = img.alt || '';
+      modal.classList.add('show');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
+  });
+
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+    }
+  });
+}
 /* ── News ───────────────────────────────────────────────────── */
 function renderNews(data, el) {
   if (!data.length) {

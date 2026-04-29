@@ -177,82 +177,33 @@ function renderNewsPreview(data, el, limit = 2) {
 
 /* ── Research ───────────────────────────────────────────────── */
 function renderResearch(data, el) {
-  const groups = {
-    ic_design: [],
-    wbg_system: [],
-    ai: []
-  };
-
-  data.forEach(item => {
-    groups[item.section].push(item);
-  });
-
-  const sections = [
-    {
-      id: "ic-design",
-      title: "Advanced Power IC Design",
-      key: "ic_design"
-    },
-    {
-      id: "wbg",
-      title: "Devices & System Integration",
-      key: "wbg_system"
-    },
-    {
-      id: "ai",
-      title: "AI-Assisted Power Applications",
-      key: "ai"
-    }
-  ];
-
   let html = "";
 
-  sections.forEach(sec => {
+  data.forEach(item => {
     html += `
-      <section id="${sec.id}">
-        <h2>${sec.title}</h2>
+      <section id="${item.id}">
+        <h2>${item.title}</h2>
+
         <div class="research-section">
+          <div class="research-topic">
+
+            <div class="research-image">
+              ${item.image ? `<img src="${item.image}" alt="${item.title}">` : ""}
+            </div>
+
+            <div class="research-content">
+              <p>${item.description}</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
     `;
-     
-groups[sec.key].forEach((topic, index) => {
-
-  const topicIds = {
-    "Smart Switch for Wide-Bandgap Devices": "smart-switch",
-    "Monolithic Novel IC Platform": "monolithic-ic",
-    "Wide-Bandgap Power Devices Multi-physics Sensing and Predictive Control": "multi-physics",
-    "Power Delivery for Next-Generation Computational Hardware": "power-delivery",
-    "": "ai-topic"
-  };
-
-  const topicId = topicIds[topic.title] || `topic-${index}`;
-
-  html += `
-    <div class="research-topic" id="${topicId}">
-
-      <div class="research-image">
-        ${topic.image ? `<img src="${topic.image}" alt="${topic.title}">` : ''}
-      </div>
-
-      <div class="research-content">
-        ${topic.title ? `<h3>${topic.title}</h3>` : ''}
-        <p>${topic.description}</p>
-      </div>
-
-    </div>
-  `;
-});
-
-    html += `</div></section>`;
   });
 
   el.innerHTML = html;
 }
-setTimeout(() => {
-  if (window.location.hash) {
-    const el = document.querySelector(window.location.hash);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  }
-}, 50);
+
 
 /* ── Publications ───────────────────────────────────────────── */
 function renderPublications(data, el) {

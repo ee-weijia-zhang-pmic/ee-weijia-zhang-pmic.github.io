@@ -386,6 +386,7 @@ section h2 {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  overflow: auto; 
 }
 
 .img-modal.show {
@@ -398,8 +399,13 @@ section h2 {
   object-fit: contain;
   border-radius: 8px;
   background: #fff;
+  transition: transform 0.15s ease;
+  transform-origin: center center; 
+  cursor: zoom-in;
 }
-
+.img-modal-content.zoomed {
+  cursor: grab;
+}
 .img-close {
   position: absolute;
   top: 18px;

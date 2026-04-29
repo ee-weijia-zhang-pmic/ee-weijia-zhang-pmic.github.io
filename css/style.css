@@ -471,7 +471,12 @@ section {
 .join-section div {
   text-align: justify;
 }
-
+.skills-block {
+  margin-left: 1.5rem;
+  margin-right: 8ch;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
 /* ── Footer ─────────────────────────────────────────────────── */
 footer {
   background: var(--bg-alt);
@@ -634,6 +639,12 @@ section {
 }
 .research-line {
   margin-bottom: 0.4rem;
+}
+   
+/* ---------- join---------- */
+.skills-block {
+  margin-left: 0;
+  margin-right: 0;
 }
 }
 

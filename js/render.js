@@ -270,24 +270,17 @@ function renderPublications(data, el) {
 }
 /* ── Infinite Gallery Slider ───────────────────────────── */
 window.addEventListener('load', initGallery);
-window.addEventListener('resize', rebuildGallery);
+window.addEventListener('resize', debounce(initGallery, 200));
 
-let galleryBuilt = false;
-
-function getShowCount() {
-  return window.innerWidth <= 768 ? 1 : 2;
+function debounce(fn, delay) {
+  let t;
+  return () => {
+    clearTimeout(t);
+    t = setTimeout(fn, delay);
+  };
 }
 
 function initGallery() {
-  buildGallery();
-}
-
-function rebuildGallery() {
-  clearTimeout(window._galleryResizeTimer);
-  window._galleryResizeTimer = setTimeout(buildGallery, 200);
-}
-
-function buildGallery() {
   const viewport = document.querySelector('.gallery-viewport');
   const track = document.querySelector('.gallery-track');
   const prevBtn = document.querySelector('.gallery-btn.prev');
@@ -295,18 +288,18 @@ function buildGallery() {
 
   if (!viewport || !track) return;
 
-  /* 还原原始内容 */
-  if (galleryBuilt && track.dataset.original) {
+  /* 防止重复初始化 */
+  if (track.dataset.ready === "true") {
     track.innerHTML = track.dataset.original;
-  } else if (!track.dataset.original) {
+  } else {
     track.dataset.original = track.innerHTML;
   }
 
+  const showCount = window.innerWidth <= 768 ? 1 : 2;
+
   const originals = Array.from(track.children);
-  const showCount = getShowCount();
   const cloneCount = showCount;
 
-  /* 克隆 */
   const head = originals.slice(0, cloneCount).map(el => el.cloneNode(true));
   const tail = originals.slice(-cloneCount).map(el => el.cloneNode(true));
 
@@ -314,58 +307,51 @@ function buildGallery() {
   head.forEach(el => track.append(el));
 
   const items = Array.from(track.children);
+
   let current = cloneCount;
   let moving = false;
 
-  function gap() {
-    return parseFloat(getComputedStyle(track).gap || 0);
-  }
-
-  function cardWidth() {
-    return items[0].offsetWidth + gap();
-  }
-
-  function scrollToIndex(index, smooth = true) {
-    viewport.scrollTo({
-      left: index * cardWidth(),
-      behavior: smooth ? 'smooth' : 'auto'
-    });
+  function stepWidth() {
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    return items[0].offsetWidth + gap;
   }
 
   function jump(index) {
-    current = index;
-    scrollToIndex(index, false);
+    viewport.scrollLeft = index * stepWidth();
   }
 
-  function move(dir) {
+  function go(index) {
     if (moving) return;
     moving = true;
+    current = index;
 
-    current += dir;
-    scrollToIndex(current, true);
-
-    setTimeout(() => {
-      const total = originals.length;
-
-      /* 到最右复制区 */
-      if (current >= total + cloneCount) {
-        current = cloneCount;
-        scrollToIndex(current, false);
-      }
-
-      /* 到最左复制区 */
-      if (current < cloneCount) {
-        current = total;
-        scrollToIndex(current, false);
-      }
-
-      moving = false;
-    }, 420);
+    viewport.scrollTo({
+      left: current * stepWidth(),
+      behavior: 'smooth'
+    });
   }
 
-  prevBtn.onclick = () => move(-1);
-  nextBtn.onclick = () => move(1);
+  viewport.addEventListener('scrollend', fixLoop);
+
+  function fixLoop() {
+    const total = originals.length;
+
+    if (current >= total + cloneCount) {
+      current = cloneCount;
+      jump(current);
+    }
+
+    if (current < cloneCount) {
+      current = total + cloneCount - 1;
+      jump(current);
+    }
+
+    moving = false;
+  }
+
+  prevBtn.onclick = () => go(current - 1);
+  nextBtn.onclick = () => go(current + 1);
 
   jump(current);
-  galleryBuilt = true;
+  track.dataset.ready = "true";
 }

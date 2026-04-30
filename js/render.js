@@ -99,8 +99,8 @@ html += `
     </div>
     
     <div class="group-photo-item">
-      <div class="group-photo-placeholder">Photo</div>
-      <p>Team photo</p>
+      <img src="assets/teamphoto.png" alt="Photo with Prof. Ng">
+      <p>Our team illustration</p>
     </div>
     
   </div>

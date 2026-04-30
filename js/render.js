@@ -125,7 +125,7 @@ function initImageZoom() {
   }
 
   const imgs = document.querySelectorAll(
-    '.pi-card img, .person-card img, .group-photo-item img'
+      'main img'
   );
 
   imgs.forEach(img => {
@@ -205,6 +205,7 @@ function renderNews(data, el) {
     html += `</section>`;
   });
   el.innerHTML = html;
+   initImageZoom();
 }
 
 function renderNewsPreview(data, el, limit = 2) {
@@ -261,7 +262,7 @@ function renderResearch(data, el) {
   });
 
   el.innerHTML = html;
-   
+  initImageZoom(); 
      /* 页面渲染完成后再执行 hash 跳转 */
   if (window.location.hash) {
     const target = document.querySelector(window.location.hash);

@@ -124,19 +124,17 @@ function initImageZoom() {
     modalImg.style.transform = `scale(${scale})`;
   }
 
-  const imgs = document.querySelectorAll(
-      'main img'
-  );
+  document.addEventListener('click', function (e) {
+    const img = e.target.closest('main img');
+    if (!img) return;
 
-  imgs.forEach(img => {
-    img.addEventListener('click', () => {
-      modalImg.src = img.src;
-      modalImg.alt = img.alt || '';
-      scale = 1;
-      applyZoom();
-      modal.classList.add('show');
-    });
+    modalImg.src = img.src;
+    modalImg.alt = img.alt || '';
+    scale = 1;
+    applyZoom();
+    modal.classList.add('show');
   });
+
 
   closeBtn.addEventListener('click', () => {
     modal.classList.remove('show');

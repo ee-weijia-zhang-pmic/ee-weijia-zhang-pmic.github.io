@@ -770,8 +770,8 @@ section {
   .gallery-track {
     grid-auto-columns: calc((100% - 28px) / 3);
   }
-  html {
-    font-size: 115%;
+  .research-lines {
+    font-size: 1.3rem; 
   }
 }
 

@@ -50,6 +50,9 @@ p:last-child { margin-bottom: 0; }
 
 ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
 
+main img {
+  cursor: zoom-in;
+}
 /* ── Layout ─────────────────────────────────────────────────── */
 
 .container {

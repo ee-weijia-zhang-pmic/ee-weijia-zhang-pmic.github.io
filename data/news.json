@@ -1,5 +1,16 @@
 [
   {
+    "year": 2026,
+    "headline": "Upcoming - ECCE Conference",
+    "description": "Xiangyu will present his research at IEEE ECCE 2026, to be held in Vancouver, Canada, in October 2026.",
+    "photos": [
+      {
+        "image": "",
+        "caption": ""
+      }
+    ]
+  },
+  {
   "year": 2026,
   "headline": "IEEE ISPSD Conference",
   "description": "Congratulations to Yuchu Ge for presenting the paper “Thermal Management of Parallel SiC MOSFETs Using Time-Domain Gate Resistance Modulation” at IEEE ISPSD 2026. The work was recognized with the Best Poster Award. In addition, Prof. Zhang served as the ICD Chair during the conference. ",

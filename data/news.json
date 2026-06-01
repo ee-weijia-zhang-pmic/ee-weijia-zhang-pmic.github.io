@@ -1,12 +1,24 @@
 [
   {
   "year": 2026,
-  "headline": "Upcoming - IEEE ISPSD",
-  "description": "Prof. Zhang will serve as <a href='https://www.ispsd2026.com/committee-members.html'_blank' rel='noopener noreferrer'>2026 IEEE 38th International Symposium on Power Semiconductor Devices and ICs (ISPSD)</a> Power IC Design (ICD) Chair.",
+  "headline": "IEEE ISPSD Conference",
+  "description": "Congratulations to Yuchu Ge for presenting the paper “Thermal Management of Parallel SiC MOSFETs Using Time-Domain Gate Resistance Modulation” at IEEE ISPSD 2026. The work was recognized with the Best Poster Award. In addition, Prof. Zhang served as the ICD Chair during the conference. ",
   "photos": [
     {
-      "image": "assets/ispsd2026.jpg",
-      "caption": ""
+      "image": "assets/2026ispsd3.jpg",
+      "caption": "Yuchu Ge receiving the Best Poster Award from the General Chair and the TPC Chair"
+    },
+    {
+      "image": "assets/2026ispsd4.jpg",
+      "caption": "Yuchu GE presenting the poster at ISPSD 2026"
+    },
+    {
+      "image": "assets/2026ispsd1.png",
+      "caption": "Weijia ZHANG presenting at ICD session"
+    },
+    {
+      "image": "assets/2026ispsd7.jpg",
+      "caption": "Group photo with Canadian alumni"
     }
   ]
  },
@@ -17,7 +29,7 @@
     "photos": [
       {
         "image": "assets/apec2026YUchu.jpg",
-        "caption": "Ge Yuchu presenting poster at APEC 2026"
+        "caption": "Ge Yuchu presenting the poster at APEC 2026"
       },
       {
         "image": "assets/apec2026.jpg",
@@ -70,14 +82,14 @@
       },
       {
         "image": "assets/ispsd2024_3.jpg",
-        "caption": "with John Pigott NXP fellow"
+        "caption": "with John Pigott, NXP fellow"
       }      
     ]
   },  
   {
     "year": 2024,
     "headline": "During Her Time at ADI",
-    "description": "Before joining academia, Prof. Weijia Zhang worked at Analog Device, Inc. (ADI). Her industry experience continues to inspire our group’s research with strong practical relevance.",
+    "description": "Before joining academia, Prof. Weijia Zhang worked at Analog Devices, Inc. (ADI). Her industry experience continues to inspire our group’s research with strong practical relevance.",
     "photos": [
       {
         "image": "assets/adipresent.jpg",

@@ -1,5 +1,34 @@
 [
   {
+    "year": 2026,
+    "authors": "Y. Ge, X. Teng, X. Ming and W. J. Zhang",
+    "title": "Thermal Management of Parallel SiC MOSFETs Using Time-Domain Gate Resistance Modulation",
+    "venue": "ISPSD",
+    "pdf": "",
+    "code": "",
+    "doi": "10.1109/ISPSD64561.2026.11553731"
+    "note": "Best Poster Award"
+  },
+  {
+    "year": 2026,
+    "authors": "Y.C. Ma,...,X. Teng, W.J Zhang, C. Liu",
+    "title": "Vertical GaN-on-Si MOSFET/JBS-based Monolithic Bidirectional Switch",
+    "venue": "ISPSD",
+    "pdf": "",
+    "code": "",
+    "doi": "10.1109/ISPSD64561.2026.11553945"
+    "note": "Collaborative"
+  },
+  {
+    "year": 2026,
+    "authors": "X. Teng, J. Chen, Y. Wu, J. Shu, K. J. Chen and W. J. Zhang",
+    "title": "Self-adjusting LFER-based Dynamic Gate Driving Technique for Fast-Switching GaN HEMTs in 48-V Applications",
+    "venue": "APEC",
+    "pdf": "",
+    "code": "",
+    "doi": "10.1109/APEC51134.2026.11516698",
+  },
+  {
     "year": 2025,
     "authors": "Y Ge, WJ Zhang",
     "title": "A Review of Active Gate Drivers for SiC Power MOSFETs",

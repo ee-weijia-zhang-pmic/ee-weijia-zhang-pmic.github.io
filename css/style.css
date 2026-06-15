@@ -519,10 +519,10 @@ section {
   color: var(--accent);
 }
 
-.award-note{
-  margin-left: .35rem;
+.pub-award{
+  margin-left: .75rem;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 /* ── Join Us ────────────────────────────────────────────────── */
 .join-section { margin-bottom: 2rem; }

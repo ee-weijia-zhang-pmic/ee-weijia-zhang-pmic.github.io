@@ -325,7 +325,7 @@ function renderPublications(data, el) {
             ${pub.doi  ? `<a href="${pub.doi}" target="_blank">DOI</a>` : ''}
 
             ${pub.note === "Best Poster Award"
-              ? `<div class="pub-note-award">Best Poster Award</div>`
+              ? `<span class="award-note">[Best Poster Award]</span>`
               : ''}
           </div>
         </li>

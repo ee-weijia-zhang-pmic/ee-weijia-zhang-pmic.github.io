@@ -519,21 +519,11 @@ section {
   color: var(--accent);
 }
 
-.award-tag{
-  display:inline-block;
-  margin-left:.6rem;
-  padding:.15rem .5rem;
-
-  font-size:.8rem;
-  font-weight:600;
-
-  border-radius:999px;
-
-  color:#8a6d00;
-  background:#fff4c7;
-  border:1px solid #e5cf73;
+.award-note{
+  margin-left: .35rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
-
 /* ── Join Us ────────────────────────────────────────────────── */
 .join-section { margin-bottom: 2rem; }
 .join-section h3 { color: var(--accent); margin-bottom: .5rem; }

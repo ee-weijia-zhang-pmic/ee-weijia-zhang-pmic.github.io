@@ -512,19 +512,6 @@ section {
 }
 .pub-links a:hover { background: var(--accent); color: #fff; text-decoration: none; }
 
-/* ── Join Us ────────────────────────────────────────────────── */
-.join-section { margin-bottom: 2rem; }
-.join-section h3 { color: var(--accent); margin-bottom: .5rem; }
-.join-section p,
-.join-section div {
-  text-align: justify;
-}
-.skills-block {
-  margin-left: 1.5rem;
-  margin-right: 16ch;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-}
 .pub-subheading{
   margin: 1.2rem 0 .6rem;
   font-size: 1rem;
@@ -545,6 +532,21 @@ section {
   color:#8a6d00;
   background:#fff4c7;
   border:1px solid #e5cf73;
+}
+
+/* ── Join Us ────────────────────────────────────────────────── */
+.join-section { margin-bottom: 2rem; }
+.join-section h3 { color: var(--accent); margin-bottom: .5rem; }
+.join-section p,
+.join-section div {
+  text-align: justify;
+}
+.skills-block {
+  margin-left: 1.5rem;
+  margin-right: 16ch;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
 
 /* ── Footer ─────────────────────────────────────────────────── */
 footer {

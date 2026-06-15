@@ -525,6 +525,27 @@ section {
   line-height: 1.7;
   margin-bottom: 1rem;
 }
+.pub-subheading{
+  margin: 1.2rem 0 .6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.award-tag{
+  display:inline-block;
+  margin-left:.6rem;
+  padding:.15rem .5rem;
+
+  font-size:.8rem;
+  font-weight:600;
+
+  border-radius:999px;
+
+  color:#8a6d00;
+  background:#fff4c7;
+  border:1px solid #e5cf73;
+
 /* ── Footer ─────────────────────────────────────────────────── */
 footer {
   background: var(--bg-alt);

@@ -294,22 +294,79 @@ function renderPublications(data, el) {
 
   let html = '';
   years.forEach(year => {
-    html += `<div class="pub-year-group"><div class="pub-year">${year}</div><ul class="pub-list">`;
-    byYear[year].forEach(pub => {
+
+  const regularPubs = byYear[year].filter(
+    pub => pub.note !== "Collaborative"
+  );
+
+  const collaborativePubs = byYear[year].filter(
+    pub => pub.note === "Collaborative"
+  );
+
+  html += `
+    <div class="pub-year-group">
+      <div class="pub-year">${year}</div>
+  `;
+
+  /* Regular publications */
+  if (regularPubs.length) {
+    html += `<ul class="pub-list">`;
+
+    regularPubs.forEach(pub => {
       html += `
         <li class="pub-entry">
           <span class="pub-authors">${pub.authors}.</span>
           "<span class="pub-title">${pub.title}</span>."
           <span class="pub-venue">${pub.venue}</span>, ${pub.year}.
+
           <div class="pub-links">
-            ${pub.pdf  ? `<a href="${pub.pdf}"  target="_blank">PDF</a>`  : ''}
+            ${pub.pdf  ? `<a href="${pub.pdf}" target="_blank">PDF</a>` : ''}
             ${pub.code ? `<a href="${pub.code}" target="_blank">Code</a>` : ''}
-            ${pub.doi  ? `<a href="${pub.doi}"  target="_blank">DOI</a>`  : ''}
+            ${pub.doi  ? `<a href="${pub.doi}" target="_blank">DOI</a>` : ''}
+
+            ${pub.note === "Best Poster Award"
+              ? `<span class="award-tag">🏆 Best Poster Award</span>`
+              : ''}
           </div>
-        </li>`;
+        </li>
+      `;
     });
-    html += '</ul></div>';
-  });
+
+    html += `</ul>`;
+  }
+
+  /* Collaborative publications */
+  if (collaborativePubs.length) {
+
+    html += `
+      <h3 class="pub-subheading">
+        Collaborative Publications
+      </h3>
+
+      <ul class="pub-list">
+    `;
+
+    collaborativePubs.forEach(pub => {
+      html += `
+        <li class="pub-entry">
+          <span class="pub-authors">${pub.authors}.</span>
+          "<span class="pub-title">${pub.title}</span>."
+          <span class="pub-venue">${pub.venue}</span>, ${pub.year}.
+
+          <div class="pub-links">
+            ${pub.pdf  ? `<a href="${pub.pdf}" target="_blank">PDF</a>` : ''}
+            ${pub.code ? `<a href="${pub.code}" target="_blank">Code</a>` : ''}
+            ${pub.doi  ? `<a href="${pub.doi}" target="_blank">DOI</a>` : ''}
+          </div>
+        </li>
+      `;
+    });
+
+    html += `</ul>`;
+  }
+
+  html += `</div>`;
+});
   el.innerHTML = html + `
   <div class="pub-note" style="margin-top: 28px; color:#666; font-size:0.95rem;">
     <p>

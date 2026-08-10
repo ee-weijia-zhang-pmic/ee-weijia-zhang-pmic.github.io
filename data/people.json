@@ -32,11 +32,18 @@
     "photo": "assets/yuchu.jpg"
   },
   {
+    "name": "Yunfeng Wu",
+    "role": "PhD Student",
+    "area": "",
+    "email": "",
+    "photo": "assets/yunfeng.jpg"
+  },
+  {
     "name": "Fengtong Li",
     "role": "MPhil Student",
     "area": "",
     "email": "flibc@connect.ust.hk",
-    "photo": "assets/fengtong.jpg"
+    "photo": "assets/fengtong2.jpg"
   },
   {
     "name": "Wenyuan Mi",

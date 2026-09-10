@@ -102,6 +102,11 @@ html += `
       <img src="assets/teamphoto.png" alt="Photo with Prof. Ng">
       <p>Our team illustration</p>
     </div>
+
+   <div class="group-photo-item">
+      <img src="assets/gp.png" alt="Photo with Prof. Ng">
+      <p>Our team</p>
+    </div>
     
   </div>
 </section>

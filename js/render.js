@@ -174,7 +174,7 @@ function renderNews(data, el) {
     return;
   }
 
-  const years = [2026, 2025, 2024];
+  const years = [2027, 2026, 2025, 2024];
   let html = '';
 
   years.forEach(year => {

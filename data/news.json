@@ -24,6 +24,12 @@
     "year": 2026,
     "headline": "ECCE Conference",
     "description": "Xiangyu Teng presented his research at IEEE ECCE 2026, held in Vancouver, Canada, in October 2026."
+    "photos": [
+      {
+        "image": "assets/ECCE2026.png",
+        "caption": "Xiangyu with his poster"
+      }
+    ]
   },
   {
     "year": 2026,

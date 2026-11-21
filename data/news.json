@@ -1,78 +1,74 @@
-[  
+[
   {
     "year": 2027,
     "headline": "Upcoming - IWIPP 2027",
     "description": "Prof. Zhang Weijia is invited to deliver an Tutorial talk at the International Workshop on Integrated Power Packaging 2027 (IWIPP 2027) in Fukuoka, Japan, from February 28 to March 4, 2027. Expected topic can be Power IC and Gate Driver Technology. "
-  
   },
   {
     "year": 2026,
     "headline": "Upcoming - IEDM 2026",
     "description": "Prof. Weijia Zhang and team will present two works at the IEEE International Electron Devices Meeting (IEDM 2026), to be held in San Francisco, USA, in December 2026."
-  
   },
   {
     "year": 2026,
     "headline": "IFWS Conference",
-    "description": "Xinuo Ma and Yunfeng Wu presented their work at IFWS 2026, held in Suzhou, China, in November 2026."
+    "description": "Xinuo Ma and Yunfeng Wu presented their work at IFWS 2026, held in Suzhou, China, in November 2026.",
     "photos": [
       {
         "image": "ISFW.jpg",
         "caption": "Photo with Prof. Wai Tung Ng"
-      } 
+      }
+    ]
   },
   {
     "year": 2026,
     "headline": "ECCE Conference",
     "description": "Xiangyu Teng presented his research at IEEE ECCE 2026, held in Vancouver, Canada, in October 2026."
-    
   },
   {
     "year": 2026,
     "headline": "IEEE ICTA 2026",
     "description": "Prof. Zhang served as a Chair at the 2026 IEEE International Conference on Integrated Circuits, Technologies and Applications (ICTA), held in Singapore on October, 2026."
-  
   },
   {
     "year": 2026,
     "headline": "ICSICT 2026",
     "description": "Prof. Weijia Zhang presented at the 2026 International Conference on Solid-State and Integrated Circuit Technology (ICSICT), held in October 2026."
-  
   },
   {
     "year": 2026,
     "headline": "Asian Deans’ Forum 2026 – The Rising Stars Women in Engineering Workshop",
-    "description": "Prof. Zhang was invited to serve as a mentor for the Asian Deans’ Forum 2026 – The Rising Stars Women in Engineering Workshop in HongKong, China. "
+    "description": "Prof. Zhang was invited to serve as a mentor for the Asian Deans’ Forum 2026 – The Rising Stars Women in Engineering Workshop in HongKong, China. ",
     "photos": [
       {
         "image": "rising2026.jpg",
         "caption": "Group photo in Asian Deans’ Forum 2026"
       }
-    
+    ]
   },
   {
-  "year": 2026,
-  "headline": "IEEE ISPSD Conference",
-  "description": "Congratulations to Yuchu Ge for presenting the paper “Thermal Management of Parallel SiC MOSFETs Using Time-Domain Gate Resistance Modulation” at IEEE ISPSD 2026. The work was recognized with the <a href=\"https://ece.hkust.edu.hk/news/congratulations-yuchu-ge-receiving-best-poster-award-ieee-ispsd-2026\" target=\"_blank\" rel=\"noopener noreferrer\">Best Poster Award</a>. In addition, Prof. Zhang served as the ICD Chair during the conference.",
-  "photos": [
-    {
-      "image": "assets/2026ispsd3.jpg",
-      "caption": "Yuchu Ge receiving the Best Poster Award from the General Chair and the TPC Chair"
-    },
-    {
-      "image": "assets/2026ispsd4.jpg",
-      "caption": "Yuchu Ge presenting the poster at ISPSD 2026"
-    },
-    {
-      "image": "assets/2026ispsd1.png",
-      "caption": "Weijia ZHANG presenting at ICD session"
-    },
-    {
-      "image": "assets/2026ispsd7.jpg",
-      "caption": "Group photo with Canadian alumni"
-    }
-  ]
- },
+    "year": 2026,
+    "headline": "IEEE ISPSD Conference",
+    "description": "Congratulations to Yuchu Ge for presenting the paper “Thermal Management of Parallel SiC MOSFETs Using Time-Domain Gate Resistance Modulation” at IEEE ISPSD 2026. The work was recognized with the <a href=\"https://ece.hkust.edu.hk/news/congratulations-yuchu-ge-receiving-best-poster-award-ieee-ispsd-2026\" target=\"_blank\" rel=\"noopener noreferrer\">Best Poster Award</a>. In addition, Prof. Zhang served as the ICD Chair during the conference.",
+    "photos": [
+      {
+        "image": "assets/2026ispsd3.jpg",
+        "caption": "Yuchu Ge receiving the Best Poster Award from the General Chair and the TPC Chair"
+      },
+      {
+        "image": "assets/2026ispsd4.jpg",
+        "caption": "Yuchu Ge presenting the poster at ISPSD 2026"
+      },
+      {
+        "image": "assets/2026ispsd1.png",
+        "caption": "Weijia ZHANG presenting at ICD session"
+      },
+      {
+        "image": "assets/2026ispsd7.jpg",
+        "caption": "Group photo with Canadian alumni"
+      }
+    ]
+  },
   {
     "year": 2026,
     "headline": "APEC Conference",
@@ -119,7 +115,7 @@
       {
         "image": "assets/ispsd icd2.jpg",
         "caption": "Group photo with ISPSD guest"
-      }      
+      }
     ]
   },
   {
@@ -134,9 +130,9 @@
       {
         "image": "assets/ispsd2024_3.jpg",
         "caption": "with John Pigott, NXP fellow"
-      }      
+      }
     ]
-  },  
+  },
   {
     "year": 2024,
     "headline": "During Her Time at ADI",
@@ -159,5 +155,5 @@
         "caption": "ADI engineers hit the slopes (Prof. Zhang, third from left)"
       }
     ]
-  } 
+  }
 ]
